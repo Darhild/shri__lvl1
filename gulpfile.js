@@ -58,7 +58,7 @@ gulp.task('csscommon', () =>  {
 gulp.task('json', function () {
     return gulp.src('./**/*.bemjson.js', { read: false })
         .pipe(bemjson())
-        .pipe(gulp.dest('./src/common.blocks/'));
+        .pipe(gulp.dest('./**'));
 });
 
 gulp.task("serve", function () {

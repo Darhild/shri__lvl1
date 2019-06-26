@@ -71,12 +71,12 @@
   --color-link: #FFF; /* Цвет ссылки */
 }
 .theme_gap_small {
-  --gap: var(--space-m);
+  --gap: var(--space-xxxl);
   --gap-half: calc(var(--gap) * 0.5); 
 }
 
-@media screen and (min-width: 1144px) {
-    :root { --gap: var(--space-xxxl); }
+@media screen and (max-width: 1144px) {
+    :root { --gap: var(--space-xxxl) };
 }
 .theme_size_default {
   --size-s: 7px;
@@ -253,11 +253,11 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.list_view_default {
-    background-color: var(--color-bg-default);
-}
 .list_border_all {
     border: 1px solid var(--color-border);
+}
+.list_view_default {
+    background-color: var(--color-bg-default);
 }
 .section_indent-b_xxl {
   margin-bottom: var(--space-xxl);
