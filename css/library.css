@@ -105,7 +105,7 @@
   --space-xxxxxl: 72px;
 }
 .grid__fraction_m-col_2 {
-  grid-column: span 2;
+  grid-column-end: span 2;
 }
 .grid__fraction_m-col_3 {
   grid-column: span 3;
@@ -114,7 +114,7 @@
   grid-column: span 4;
 }
 .grid__fraction_m-col_5 {
-  grid-column: span 5;
+  grid-column-end: span 5;
 }
 .grid__fraction_m-col_8 {
   grid-column: span 8;
@@ -160,29 +160,25 @@
 .grid_col-gap_two-thirds {
    grid-column-gap:  calc(var(--gap) * 0.66);
 }
-.grid_m-columns_10 {
-  grid-template-columns: repeat(10, 1fr);
-}
-
 @media screen and (max-width: 1144px) {
   .grid_m-columns_10 {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 .grid_m-columns_12 {
   grid-template-columns: repeat(12, 1fr);
 }
 
-@media screen and (max-width: 1144px) {
-  .grid_m-columns_12 {
-    grid-template-columns: 1fr;
-  }
-}
 .grid_row-gap_full {
    grid-row-gap:  var(--gap);
 }
 .grid_row-gap_half {
    grid-row-gap:  var(--gap-half);
+}
+@media screen and (max-width: 1144px) {
+  .grid__fraction {
+    grid-column-start: 1;
+  }
 }
 .layout__container {
   width: 100%;
@@ -221,12 +217,10 @@
     width: 100%;
 }
 .form_border_all {
-  border: 1px solid var(--color-border);
+  border: 3px solid var(--color-border);
 }
 
-.form_border_all .form__item_border_bottom::last-child {
-  border: none;
-}
+
 
 .form_view_default {
   background-color: var(--color-bg-default);
@@ -253,11 +247,11 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.list_view_default {
-    background-color: var(--color-bg-default);
-}
 .list_border_all {
     border: 1px solid var(--color-border);
+}
+.list_view_default {
+    background-color: var(--color-bg-default);
 }
 .section_indent-b_xxl {
   margin-bottom: var(--space-xxl);
@@ -353,6 +347,10 @@
 }
 .form__item_border_bottom {
   border-bottom: 1px solid var(--color-border);
+}
+
+.form__item_border_bottom:last-child {
+  border: none;
 }
 
 
@@ -560,6 +558,9 @@
   width: 200px;
   background-color: var(--color-bg-accent);
 }
+.input {
+  width: 100%;
+}
 .image {
   width: 100%;
   background-color: #fff;
@@ -572,9 +573,6 @@
 .theme_color_project-inverse.image {
   background-color: #000;
   background-image: url("data:image/svg+xml,%3Csvg width='80px' height='64px' viewBox='0 0 80 64' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3Eplaceholder%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='image-placeholder' transform='translate(-620.000000, -368.000000)' fill='%23FFFFFF' fill-rule='nonzero'%3E%3Cg id='Group' transform='translate(500.000000, 368.000000)'%3E%3Cg id='placeholder' transform='translate(120.000000, 0.000000)'%3E%3Cpath d='M32,16 L48,16 L48,8 L56,8 L56,16 L64,16 L64,24 L72,24 L72,32 L80,32 L80,48 L72,48 L72,40 L64,40 L64,48 L56,48 L56,56 L48,56 L48,48 L32,48 L32,56 L24,56 L24,48 L16,48 L16,40 L8,40 L8,48 L0,48 L0,32 L8,32 L8,24 L16,24 L16,16 L24,16 L24,8 L32,8 L32,16 Z M24,32 L32,32 L32,24 L24,24 L24,32 Z M16,0 L24,0 L24,8 L16,8 L16,0 Z M16,56 L24,56 L24,64 L16,64 L16,56 Z M56,32 L56,24 L48,24 L48,32 L56,32 Z M64,0 L64,8 L56,8 L56,0 L64,0 Z M64,56 L64,64 L56,64 L56,56 L64,56 Z' id='Shape'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-.input {
-  width: 100%;
 }
 .placeholder {
   background-color: var(--color-text-primary);

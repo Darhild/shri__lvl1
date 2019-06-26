@@ -1,3 +1,10 @@
+.articles__pic {
+    width: 170px;
+    height: 120px;
+  }
+  .articles__title {
+    margin-bottom: var(--space-xs);
+  }
 .collect {
   min-height: 380px;
   border-width: 3px;
@@ -31,13 +38,6 @@
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-  }
-.articles__pic {
-    width: 170px;
-    height: 120px;
-  }
-  .articles__title {
-    margin-bottom: var(--space-xs);
   }
 .commercial {
   min-height: 430px;
@@ -227,7 +227,7 @@
   }
 
   .payment__label {
-    margin-right: 40px;
+  
   }
 
   .payment .input {
