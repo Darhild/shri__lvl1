@@ -1,0 +1,19 @@
+.warning {
+  display: flex;
+  flex-direction: column;
+  min-height: 335px;
+
+  &__button-wrapper {
+    margin-top: auto;
+  }
+
+  &__placeholder {
+    margin-top: var(--space-m);
+    margin-bottom: var(--space-m);
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+}

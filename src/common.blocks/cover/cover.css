@@ -1,0 +1,9 @@
+.cover {
+  min-height: 408px;
+
+  &__preview {
+    margin-bottom: var(--space-m);
+    min-height: 180px;
+    border-width: 3px;
+  }
+}

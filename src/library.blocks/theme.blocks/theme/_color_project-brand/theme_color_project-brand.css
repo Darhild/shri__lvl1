@@ -1,0 +1,13 @@
+.theme_color_project-brand {
+
+/* Цвета блоков */
+  --color-bg-default: #0070f0; /* Цвет по умолчанию */
+  --color-bg-accent: #FFFFFF; /* Акцентный цвет*/
+  --color-border: #FFFFFF; /* Цвет границ */
+
+  /* Цвета текста */
+  --color-text-primary: #FFFFFF; /* Цвет основного текста */
+  --color-text-secondary: rgba(255, 255, 255, 0.6); /* Цвет второстепенного текста */
+  --color-text-ghost: rgba(255, 255, 255, 0.3); /* Цвет дополнительного текста */
+  --color-link: #FFFFFF; /* Цвет ссылки */
+}

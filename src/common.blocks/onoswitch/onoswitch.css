@@ -1,0 +1,13 @@
+.onoswitch {
+  width: 97px;
+  height: 32px;
+  padding: 2px;
+  border: 2px solid var(--color-text-primary);
+  cursor: pointer;
+
+  &__switcher {
+    width: 24px;
+    height: 24px;
+    background-color: var(--color-text-primary);
+  }
+}

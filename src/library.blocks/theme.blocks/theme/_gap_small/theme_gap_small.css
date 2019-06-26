@@ -1,0 +1,10 @@
+@import '../_breakpoint_default/theme_breakpoint_default.css';
+
+.theme_gap_small {
+  --gap: var(--space-m);
+  --gap-half: calc(var(--gap) * 0.5); 
+}
+
+  @media screen and (min-width: $screen-desktop) {
+    :root { --gap: var(--space-xxxl); }
+}

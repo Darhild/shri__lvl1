@@ -1,0 +1,5 @@
+.text_view_secondary {
+  .text__word {
+    background-color: var(--color-text-secondary);
+  }
+}

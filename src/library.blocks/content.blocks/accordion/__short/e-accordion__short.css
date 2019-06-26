@@ -1,0 +1,7 @@
+.e-accordion__short {
+  cursor: pointer;
+  
+  input {
+    display: none;
+  }
+}

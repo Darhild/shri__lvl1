@@ -1,0 +1,25 @@
+.history {
+  border-width: 3px;
+
+  &__details {
+    display: flex;
+  }
+
+  &__time {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__sum {
+    margin-left: auto;
+  }
+
+  &:last-child {
+    border: none;
+  };
+
+  .list__item_border_bottom {
+    border-width: 3px;
+  }
+}

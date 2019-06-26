@@ -1,0 +1,18 @@
+.event {
+  min-height: 333px;
+
+  &__participant {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--space-xl);
+  }
+
+  &__avatar {
+    margin-right: var(--space-xs);
+    background-color: #fff;
+  }
+
+  &__title {
+    margin-bottom: var(--space-s);
+  }
+}

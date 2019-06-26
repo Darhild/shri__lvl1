@@ -1,0 +1,27 @@
+.commercial {
+  min-height: 430px;
+  border-width: 3px;
+
+  &__image {
+    height: 180px;
+    border-width: 3px;
+  }
+
+  &__info {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__text {
+    margin-bottom: var(--space-s);
+  }
+
+  &__navigation {
+    display: inline-block;
+    margin-right: var(--space-xs);
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+}

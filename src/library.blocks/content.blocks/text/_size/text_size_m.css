@@ -1,0 +1,22 @@
+.text_size_m {
+  font-size: var(--size-m);
+  line-height: var(--line-height-m);
+
+  .text__word_width_s {
+    width: 24px;
+  }
+
+  .text__word_width_m {
+    width: 56px;
+  }
+
+  .text__word_width_l {
+    width: 114px;
+  }
+
+  .text__word {
+    height: 8px;
+    margin-top: calc((var(--line-height-m) - 8px) / 2);
+    margin-bottom: calc((var(--line-height-m) - 8px) / 2);
+  }
+}
