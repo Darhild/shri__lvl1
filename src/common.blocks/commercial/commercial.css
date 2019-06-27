@@ -13,15 +13,23 @@
   }
 
   &__text {
-    margin-bottom: var(--space-s);
+    margin-bottom: calc(var(--space-s) - ((var(--space-s) - 7px) / 2));
   }
 
   &__navigation {
+    text-align: center;
+  }
+
+  &__page-button {
     display: inline-block;
     margin-right: var(--space-xs);
     width: 8px;
     height: 8px;
     background-color: #fff;
     cursor: pointer;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }

@@ -1,0 +1,6 @@
+.page-index {
+  &__grid {
+    grid-row-gap: var(--space-xxl);
+    margin-bottom: var(--space-xxl);
+  }
+}

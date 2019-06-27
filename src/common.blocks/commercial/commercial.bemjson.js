@@ -68,16 +68,16 @@ module.exports.bemjson = {
           ]
         },
         { block: 'commercial',
-          elem: 'navigation-wrapper',
+          elem: 'navigation',
           content: [
             { block: 'commercial',
-              elem: 'navigation'
+              elem: 'page-button'
             },
             { block: 'commercial',
-              elem: 'navigation'
+              elem: 'page-button'
             },
             { block: 'commercial',
-              elem: 'navigation'
+              elem: 'page-button'
             }
           ]
         }

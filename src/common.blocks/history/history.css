@@ -1,6 +1,10 @@
 .history {
   border-width: 3px;
 
+  &__transaction {
+    border-width: 3px;
+  }
+
   &__details {
     display: flex;
   }
