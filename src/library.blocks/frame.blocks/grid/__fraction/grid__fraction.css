@@ -1,0 +1,7 @@
+@import '../../../theme.blocks/theme/_breakpoint_default/theme_breakpoint_default.css';
+
+@media screen and (max-width: $screen-desktop) {
+  .grid__fraction {
+    grid-column-start: 1;
+  }
+}

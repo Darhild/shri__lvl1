@@ -4,8 +4,10 @@
   padding: 2px;
   border: 2px solid var(--color-text-primary);
   cursor: pointer;
+  text-align: right;
 
   &__switcher {
+    display: inline-block;
     width: 24px;
     height: 24px;
     background-color: var(--color-text-primary);

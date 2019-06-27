@@ -44,7 +44,14 @@ module.exports.bemjson = {
                 }
               ]
             },
-            {block: 'input', mods: {'size': 'l'}}
+            { block: 'payment',
+              elem: 'control',
+              mix: [
+                {block: 'form', elem: 'control'},
+              ],
+              content: 
+                {block: 'input', mods: {'size': 'l'}}
+            }
           ]
         },
         { block: 'payment',
@@ -55,17 +62,23 @@ module.exports.bemjson = {
           content: [
             { block: 'payment',
               elem: 'label',
-              elemMods: {'width': 'default'},
               mix: [
                 {block: 'form', elem: 'label', mods: {'width': 'default'}},
                 {block: 'text', mods: {'view': 'primary', 'size': 'l'}}
               ],
               content: [
-                {block: 'text', elem: 'word', elemMods: {'width': 'l'}
+                { block: 'text', elem: 'word', elemMods: {'width': 'l'}
                 }
               ]
             },
-            {block: 'input', mods: {'size': 'l'}}
+            { block: 'payment',
+              elem: 'control',
+              mix: [
+                {block: 'form', elem: 'control'},
+              ],
+              content: 
+                {block: 'input', mods: {'size': 'l'}}
+            }
           ]
         }
       ]

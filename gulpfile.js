@@ -37,6 +37,24 @@ gulp.task('css', () =>  {
     .pipe(server.stream());
 });
 
+gulp.task('csspages', () =>  {
+  let plugins = [
+    postcssImport(),
+    postcssSimpleVars(),
+    postcssNested(),
+    next()
+  ];
+  return gulp.src('./src/pages/*.css')
+    .pipe(postcss(plugins))
+    .pipe(concat('pages.css'))
+    .pipe(gulp.dest('./css'))
+//    .pipe(csso())
+//    .pipe(rename({ suffix: '.min' }))
+//    .pipe(gulp.dest('./css'));
+    .pipe(server.stream());
+});
+
+
 gulp.task('csscommon', () =>  {
   let plugins = [
     postcssImport(),
@@ -61,6 +79,12 @@ gulp.task('json', function () {
         .pipe(gulp.dest('./**'));
 });
 
+gulp.task('json-page', function () {
+    return gulp.src('./src/pages/*.bemjson.js', { read: false })
+        .pipe(bemjson())
+        .pipe(gulp.dest('./src/pages/'));
+});
+
 gulp.task("serve", function () {
   server.init({
     server: {
@@ -72,8 +96,9 @@ gulp.task("serve", function () {
     ui: false
   });
 
-  gulp.watch("./src/common.blocks/**/*.css", gulp.series("csscommon"));
+  gulp.watch("./src/**/*.css", gulp.series("csscommon"));
   gulp.watch("./**/*.bemjson.js", gulp.series("json"));
   gulp.watch("./src/library.blocks/**/*.css", gulp.series("css"));
+  gulp.watch("./src/pages/*.css", gulp.series("csspages"));
   gulp.watch("*.html").on("change", server.reload);
 });
