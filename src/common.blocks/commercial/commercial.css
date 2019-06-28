@@ -13,15 +13,16 @@
   }
 
   &__text {
-    margin-bottom: calc(var(--space-s) - ((var(--space-s) - 7px) / 2));
+    margin-bottom:var(--space-s);
   }
 
   &__navigation {
-    text-align: center;
+    display: flex;
+    justify-content: center;
   }
 
   &__page-button {
-    display: inline-block;
+    display: block;
     margin-right: var(--space-xs);
     width: 8px;
     height: 8px;

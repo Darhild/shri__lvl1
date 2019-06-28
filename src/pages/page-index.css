@@ -2,5 +2,9 @@
   &__grid {
     grid-row-gap: var(--space-xxl);
     margin-bottom: var(--space-xxl);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

@@ -60,15 +60,20 @@
   }
 
   .commercial__text {
-    margin-bottom: calc(var(--space-s) - (var(--space-s) - 7px) / 2);
+    margin-bottom:var(--space-s);
   }
 
   .commercial__navigation {
-    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .commercial__page-button {
-    display: inline-block;
+    display: block;
     margin-right: var(--space-xs);
     width: 8px;
     height: 8px;
@@ -118,10 +123,8 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 1144px;
-  padding-top: var(--space-xxl);
-  padding-bottom: var(--space-xxl);
-  padding-left: var(--gap);
-  padding-right: var(--gap);
+  margin-top: var(--space-xxxl);
+  margin-bottom: var(--space-xxxl);
   background-color: #fff;
 }
 .header {
@@ -132,8 +135,8 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 1144px;
-  padding-top: var(--space-xx);
-  padding-bottom: var(--space-xxxl);
+  margin-top: var(--space-xxxl);
+  margin-bottom: var(--space-xxxl);
   background-color: #fff;
 
 }
@@ -150,6 +153,10 @@
   .history__transaction {
     border-width: 3px;
   }
+
+  .history__transaction:last-child {
+      border: none;
+    }
 
   .history__details {
     display: -webkit-box;
@@ -172,14 +179,6 @@
 
   .history__sum {
     margin-left: auto;
-  }
-
-  .history:last-child {
-    border: none;
-  };
-
-  .history .list__item_border_bottom {
-    border-width: 3px;
   }
 
 .offer {

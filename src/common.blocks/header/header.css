@@ -4,8 +4,8 @@
   display: flex;
   justify-content: space-between;
   max-width: $screen-desktop;
-  padding-top: var(--space-xxчl);
-  padding-bottom: var(--space-xxxl);
+  margin-top: var(--space-xxxl);
+  margin-bottom: var(--space-xxxl);
   background-color: #fff;
 
   &__logo {
