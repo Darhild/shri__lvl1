@@ -1,6 +1,4 @@
 .text_size_xl {
-  font-size: var(--size-xl);
-  line-height: var(--line-height-xl);
 
   .text__word_width_s {
     width: 32px;

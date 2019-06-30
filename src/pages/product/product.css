@@ -1,0 +1,10 @@
+.page-product {
+
+  &__cover {
+    align-self: self-start;
+  }
+
+  &__products-title {
+    margin-bottom: var(--space-xxl);
+  }
+}

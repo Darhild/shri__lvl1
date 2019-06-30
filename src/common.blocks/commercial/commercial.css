@@ -4,6 +4,7 @@
 
   &__image {
     height: 180px;
+    background-color: transparent;
     border-width: 3px;
   }
 
@@ -13,7 +14,7 @@
   }
 
   &__text {
-    margin-bottom:var(--space-s);
+    margin-bottom: var(--space-s);
   }
 
   &__navigation {
@@ -23,9 +24,9 @@
 
   &__page-button {
     display: block;
-    margin-right: var(--space-xs);
     width: 8px;
     height: 8px;
+    margin-right: var(--space-xs);
     background-color: #fff;
     cursor: pointer;
 

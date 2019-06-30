@@ -1,15 +1,19 @@
-.onoswitch {
+.onoffswitch {
   width: 97px;
   height: 32px;
   padding: 2px;
+  text-align: right;
   border: 2px solid var(--color-text-primary);
   cursor: pointer;
-  text-align: right;
 
-  &__switcher {
+  &__button {
     display: inline-block;
     width: 24px;
     height: 24px;
     background-color: var(--color-text-primary);
   }
+}
+
+.theme_color_project-inverse .onoffswitch {
+  text-align: left;
 }

@@ -1,7 +1,9 @@
 .articles {
+
   &__pic {
     width: 170px;
     height: 120px;
+    border: none;
   }
 
   &__title {

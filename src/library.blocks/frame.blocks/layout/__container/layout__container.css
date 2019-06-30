@@ -1,3 +1,14 @@
+@import "../../../theme.blocks/theme/_breakpoint_default/theme_breakpoint_default.css";
+
 .layout__container {
   width: 100%;
+}
+
+@media screen and (max-width: $screen-desktop) {
+
+  .layout__container {
+
+    padding-right: var(--space-m);
+    padding-left: var(--space-m);
+  }
 }

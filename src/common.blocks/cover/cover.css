@@ -2,8 +2,9 @@
   min-height: 408px;
 
   &__preview {
-    margin-bottom: var(--space-m);
     min-height: 180px;
+    margin-bottom: var(--space-m);
+    background-color: transparent;
     border-width: 3px;
   }
 }

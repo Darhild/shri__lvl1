@@ -44,7 +44,7 @@ gulp.task('csspages', () =>  {
     postcssNested(),
     next()
   ];
-  return gulp.src('./src/pages/*.css')
+  return gulp.src('./src/pages/**/*.css')
     .pipe(postcss(plugins))
     .pipe(concat('pages.css'))
     .pipe(gulp.dest('./css'))
@@ -74,15 +74,9 @@ gulp.task('csscommon', () =>  {
 });
 
 gulp.task('json', function () {
-    return gulp.src('./**/*.bemjson.js', { read: false })
+    return gulp.src('./src/**/*.bemjson.js', { read: false })
         .pipe(bemjson())
-        .pipe(gulp.dest('./**'));
-});
-
-gulp.task('json-page', function () {
-    return gulp.src('./src/pages/*.bemjson.js', { read: false })
-        .pipe(bemjson())
-        .pipe(gulp.dest('./src/pages/'));
+        .pipe(gulp.dest('./src'));
 });
 
 gulp.task("serve", function () {
@@ -96,9 +90,9 @@ gulp.task("serve", function () {
     ui: false
   });
 
-  gulp.watch("./src/**/*.css", gulp.series("csscommon"));
-  gulp.watch("./**/*.bemjson.js", gulp.series("json"));
+  gulp.watch("./src/common.blocks/**/*.css", gulp.series("csscommon"));
+  gulp.watch("./src/**/*.bemjson.js", gulp.series("json"));
   gulp.watch("./src/library.blocks/**/*.css", gulp.series("css"));
-  gulp.watch("./src/pages/*.css", gulp.series("csspages"));
+  gulp.watch("./src/pages/**/*.css", gulp.series("csspages"));
   gulp.watch("*.html").on("change", server.reload);
 });

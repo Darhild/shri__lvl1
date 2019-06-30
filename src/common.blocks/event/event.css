@@ -9,7 +9,6 @@
 
   &__avatar {
     margin-right: var(--space-xs);
-    background-color: #fff;
   }
 
   &__title {

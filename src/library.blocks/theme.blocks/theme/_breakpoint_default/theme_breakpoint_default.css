@@ -1,1 +1,5 @@
 $screen-desktop: 1144px;
+
+.theme_breakpoint_default {
+  --screen-desktop: 1144px;
+}

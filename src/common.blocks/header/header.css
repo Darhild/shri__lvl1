@@ -1,17 +1,21 @@
-@import '../../library.blocks/theme.blocks/theme/_breakpoint_default/theme_breakpoint_default.css';
+@import "../../library.blocks/theme.blocks/theme/_breakpoint_default/theme_breakpoint_default.css";
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  max-width: $screen-desktop;
-  margin-top: var(--space-xxxl);
-  margin-bottom: var(--space-xxxl);
-  background-color: #fff;
+  padding-top: var(--space-xxxl);
+  padding-bottom: var(--space-xxxl);
+  background-color: var(--color-bg-default);
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    max-width: $screen-desktop;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
   &__logo {
     width: 179px;
     height: 34px;
     background-color: var(--color-text-primary);
   }
-
 }

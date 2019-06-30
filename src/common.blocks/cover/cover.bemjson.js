@@ -14,9 +14,9 @@ module.exports.bemjson = {
         { block: 'cover',
           elem: 'preview',
           mix: [
-            {block: 'image'},
-            {block: 'theme', mods: {'color': 'project-inverse'}}
-          ]
+            { block: 'image'},
+            { block: 'theme', mods: {'color': 'project-inverse'}}
+          ],
         },
         { block: 'cover',
           elem: 'name',

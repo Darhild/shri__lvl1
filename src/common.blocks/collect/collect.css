@@ -2,20 +2,31 @@
   min-height: 380px;
   border-width: 3px;
 
-  &__progressbar {
+  &__progress {
     height: 11px;
-    border-bottom: 3px solid #fff;
+    border-bottom: 3px solid var(--color-text-primary);
   }
 
-  &__progressbar-scale {
-    width: 65%;
+  &__done {
     height: 100%;
     background-color: var(--color-link);
+
+    &_size_one-third {
+      width: 33%;
+    }
+
+    &_size_half {
+      width: 50%;
+    }
+
+    &_size_two-third {
+      width: 66%;
+    }
   }
 
   &__image {
     height: 160px;
-    background-color: #fff;
+    border: none;
   }
 
   &__title {

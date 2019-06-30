@@ -1,6 +1,4 @@
 .text_size_l {
-  font-size: var(--size-l);
-  height: var(--line-height-l);
 
   .text__word_width_s {
     width: 28px;

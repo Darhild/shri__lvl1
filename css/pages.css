@@ -1,3 +1,12 @@
+.page__section {
+    overflow: auto;
+  }
+
+    .page__section_space-v_xxl {
+      padding-top: var(--space-xxl);
+      padding-bottom: var(--space-xxl);
+    }
+
 .page-index__grid {
     grid-row-gap: var(--space-xxl);
     margin-bottom: var(--space-xxl);
@@ -6,3 +15,17 @@
     .page-index__grid:last-child {
       margin-bottom: 0;
     }
+
+  .page-index__commercial {
+    -ms-flex-item-align: self-start;
+        align-self: self-start;
+  }
+
+.page-product__cover {
+    -ms-flex-item-align: self-start;
+        align-self: self-start;
+  }
+
+  .page-product__products-title {
+    margin-bottom: var(--space-xxl);
+  }

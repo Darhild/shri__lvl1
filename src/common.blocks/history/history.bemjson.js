@@ -10,7 +10,7 @@ module.exports.bemjson = {
           elem: 'show',
           mix: [
             {block: 'e-accordion', elem: 'short'},
-            {block: 'list', elem: 'item', elemMods: {'vertical-align': 'center'}}
+            {block: 'list', elem: 'item', elemMods: {'vertical-align': 'center', 'indent-t': 'm'}}
           ],
           content: [
             { block: 'history',

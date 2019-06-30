@@ -1,7 +1,3 @@
 .e-accordion__more {
   display: none;
 }
-
-.e-accordion :checked ~ .e-accordion__more { 
-  display: block;
-}

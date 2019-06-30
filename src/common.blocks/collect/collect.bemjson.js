@@ -13,10 +13,10 @@ module.exports.bemjson = {
       ]
     },
     { block: 'collect',
-      elem: 'progressbar',
+      elem: 'progress',
       content: [
         { block: 'collect',
-          elem: 'progressbar-scale'
+          elem: 'done'
         }
       ]
     },

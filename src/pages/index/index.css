@@ -1,4 +1,5 @@
 .page-index {
+
   &__grid {
     grid-row-gap: var(--space-xxl);
     margin-bottom: var(--space-xxl);
@@ -6,5 +7,9 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  &__commercial {
+    align-self: self-start;
   }
 }

@@ -1,29 +1,43 @@
 .articles__pic {
     width: 170px;
     height: 120px;
+    border: none;
   }
+
   .articles__title {
     margin-bottom: var(--space-xs);
   }
+
 .collect {
   min-height: 380px;
   border-width: 3px;
 }
 
-  .collect__progressbar {
+  .collect__progress {
     height: 11px;
-    border-bottom: 3px solid #fff;
+    border-bottom: 3px solid var(--color-text-primary);
   }
 
-  .collect__progressbar-scale {
-    width: 65%;
+  .collect__done {
     height: 100%;
     background-color: var(--color-link);
   }
 
+  .collect__done_size_one-third {
+      width: 33%;
+    }
+
+  .collect__done_size_half {
+      width: 50%;
+    }
+
+  .collect__done_size_two-third {
+      width: 66%;
+    }
+
   .collect__image {
     height: 160px;
-    background-color: #fff;
+    border: none;
   }
 
   .collect__title {
@@ -39,6 +53,7 @@
         -ms-flex-align: start;
             align-items: flex-start;
   }
+
 .commercial {
   min-height: 430px;
   border-width: 3px;
@@ -46,6 +61,7 @@
 
   .commercial__image {
     height: 180px;
+    background-color: transparent;
     border-width: 3px;
   }
 
@@ -60,7 +76,7 @@
   }
 
   .commercial__text {
-    margin-bottom:var(--space-s);
+    margin-bottom: var(--space-s);
   }
 
   .commercial__navigation {
@@ -74,9 +90,9 @@
 
   .commercial__page-button {
     display: block;
-    margin-right: var(--space-xs);
     width: 8px;
     height: 8px;
+    margin-right: var(--space-xs);
     background-color: #fff;
     cursor: pointer;
   }
@@ -84,15 +100,18 @@
   .commercial__page-button:last-child {
       margin-right: 0;
     }
+
 .cover {
   min-height: 408px;
 }
 
   .cover__preview {
-    margin-bottom: var(--space-m);
     min-height: 180px;
+    margin-bottom: var(--space-m);
+    background-color: transparent;
     border-width: 3px;
   }
+
 .event {
   min-height: 333px;
 }
@@ -109,39 +128,56 @@
 
   .event__avatar {
     margin-right: var(--space-xs);
-    background-color: #fff;
   }
 
   .event__title {
     margin-bottom: var(--space-s);
   }
+
+.theme_breakpoint_default {
+  --screen-desktop: 1144px;
+}
+
 .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  max-width: 1144px;
-  margin-top: var(--space-xxxl);
-  margin-bottom: var(--space-xxxl);
-  background-color: #fff;
+  padding-top: var(--space-xxxl);
+  padding-bottom: var(--space-xxxl);
+  background-color: var(--color-bg-default);
 }
+
+.footer__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 1144px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+.theme_breakpoint_default {
+  --screen-desktop: 1144px;
+}
+
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  max-width: 1144px;
-  margin-top: var(--space-xxxl);
-  margin-bottom: var(--space-xxxl);
-  background-color: #fff;
-
+  padding-top: var(--space-xxxl);
+  padding-bottom: var(--space-xxxl);
+  background-color: var(--color-bg-default);
 }
 
-  .header__logo {
+.header__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 1144px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+.header__logo {
     width: 179px;
     height: 34px;
     background-color: var(--color-text-primary);
@@ -202,23 +238,29 @@
   .offer__name {
     margin-bottom: var(--space-xs);
   }
-.onoswitch {
+.onoffswitch {
   width: 97px;
   height: 32px;
   padding: 2px;
+  text-align: right;
   border: 2px solid var(--color-text-primary);
   cursor: pointer;
-  text-align: right;
 }
 
-  .onoswitch__switcher {
+  .onoffswitch__button {
     display: inline-block;
     width: 24px;
     height: 24px;
     background-color: var(--color-text-primary);
   }
+
+.theme_color_project-inverse .onoffswitch {
+  text-align: left;
+}
+
 .payment {
   display: inline-block;
+  background-color: var(--color-bg-default);
   border-width: 3px;
 }
 
@@ -239,6 +281,7 @@
   .payment .input {
     border: 3px solid var(--color-border);
   }
+
 .product {
   min-height: 280px;
   border-width: 3px;
@@ -250,8 +293,9 @@
 
   .product__image {
     height: 160px;
-    background-color: #000;
+    border: none;
   }
+
 .subscription {
   min-height: 408px;
 }

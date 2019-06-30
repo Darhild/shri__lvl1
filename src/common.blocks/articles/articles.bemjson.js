@@ -183,7 +183,7 @@ module.exports.bemjson = {
     { block: 'articles',
       elem: 'article',
       mix: [
-        { block: 'list', elem: 'item', elemMods: {'indent-b': 'xl'}}
+        { block: 'list', elem: 'item'}
       ],
       content: [
         { block: 'articles',

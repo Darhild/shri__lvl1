@@ -8,6 +8,6 @@
 
   &__image {
     height: 160px;
-    background-color: #000;
+    border: none;
   }
 }
