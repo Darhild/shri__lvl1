@@ -1,3 +1,5 @@
+@import "../../library.blocks/theme.blocks/theme/_breakpoint_default/theme_breakpoint_default.css";
+
 .commercial {
   min-height: 430px;
   border-width: 3px;
@@ -33,5 +35,12 @@
     &:last-child {
       margin-right: 0;
     }
+  }
+}
+
+@media screen and (max-width: $screen-desktop) {
+
+  .commercial {
+    grid-column-end: span 8;
   }
 }

@@ -1,3 +1,5 @@
+@import "../../library.blocks/theme.blocks/theme/_breakpoint_default/theme_breakpoint_default.css";
+
 .subscription {
   min-height: 408px;
 
@@ -11,5 +13,12 @@
 
   &__input {
     border: 3px solid var(--color-text-primary);
+  }
+}
+
+@media screen and (max-width: $screen-desktop) {
+
+  .subscription {
+    grid-column-end: span 8;
   }
 }

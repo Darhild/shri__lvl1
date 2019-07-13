@@ -13,3 +13,11 @@
     margin-left: auto;
   }
 }
+
+@media screen and (max-width: $screen-desktop) {
+
+  .footer {
+    padding-right: var(--gap);
+    padding-left: var(--gap);
+  }
+}

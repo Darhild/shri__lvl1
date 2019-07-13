@@ -1,5 +1,8 @@
 module.exports.bemjson = {
   block: 'page-index',
+  mix: [
+    {block: 'theme', mods: {'color': 'project-default', 'size': 'default', 'space': 'default', 'gap': 'small'}}
+  ],
   content: [
     { block: 'header',
       content: [
@@ -30,17 +33,12 @@ module.exports.bemjson = {
         {block: 'layout'}
       ],
       content: [
-        { block: 'page-index',
+        { block: 'layout',
           elem: 'container',
-          mix: [
-            {block: 'layout', elem: 'container', elemMods: {'align': 'center', 'size': 'm'}}
-          ],
+          elemMods: {'align': 'center', 'size': 'm', 'indent-b': 'xxl'},
           content: [
-            { block: 'page-index',
-              elem: 'grid',
-              mix: [
-                {block: 'grid', mods: {'m-columns': '10', 'col-gap': 'full', 'row-gap': 'xxl'}}
-              ],
+            { block: 'grid',
+              mods: {'m-columns': '10', 'col-gap': 'full', 'row-gap': 'xxl'},
               content: [
                 { block: 'payment',
                   mix: [
@@ -80,7 +78,7 @@ module.exports.bemjson = {
                             { block: 'payment',
                               elem: 'label',
                               mix: [
-                                {block: 'form', elem: 'label', mods: {'width': 'default'}},
+                                {block: 'form', elem: 'label', elemMods: {'width': 'default'}},
                                 {block: 'text', mods: {'view': 'primary', 'size': 'l'}}
                               ],
                               content: [
@@ -107,7 +105,7 @@ module.exports.bemjson = {
                             { block: 'payment',
                               elem: 'label',
                               mix: [
-                                {block: 'form', elem: 'label', mods: {'width': 'default'}},
+                                {block: 'form', elem: 'label', elemMods: {'width': 'default'}},
                                 {block: 'text', mods: {'view': 'primary', 'size': 'l'}}
                               ],
                               content: [
@@ -255,12 +253,15 @@ module.exports.bemjson = {
                   ]
                 }
               ]
-            },
-            { block: 'page-index',
-              elem: 'grid',
-              mix: [
-                {block: 'grid', mods: {'m-columns': '10', 'col-gap': 'half', 'row-gap': 'xxl'}}
-              ],
+            }
+          ]
+        },
+        { block: 'layout',
+          elem: 'container',
+          elemMods: {'align': 'center', 'size': 'm', 'indent-b': 'xxl'},
+          content: [
+            { block: 'grid',
+              mods: {'m-columns': '10', 'col-gap': 'half', 'row-gap': 'xxl'},
               content: [
                 { block: 'product',
                   mix: [
@@ -508,12 +509,15 @@ module.exports.bemjson = {
                   ]
                 }
               ]
-            },
-            { block: 'page-index',
-              elem: 'grid',
-              mix: [
-                {block: 'grid', mods: {'m-columns': '12', 'col-gap': 'full', 'row-gap': 'xxl'}}
-              ],
+            }
+          ]
+        },
+        { block: 'layout',
+          elem: 'container',
+          elemMods: {'align': 'center', 'size': 'm'},
+          content: [
+            { block: 'grid',
+              mods: {'m-columns': '12', 'col-gap': 'full', 'row-gap': 'xxl'},
               content: [
                 { block: 'history',
                   mix: [
@@ -529,7 +533,7 @@ module.exports.bemjson = {
                           elem: 'show',
                           mix: [
                             {block: 'e-accordion', elem: 'short'},
-                            {block: 'list', elem: 'item', elemMods: {'vertical-align': 'center'}}
+                            {block: 'list', elem: 'item', elemMods: {'vertical-align': 'center', 'indent-t': 'm'}}
                           ],
                           content: [
                             { block: 'history',
@@ -699,7 +703,7 @@ module.exports.bemjson = {
                           elem: 'show',
                           mix: [
                             {block: 'e-accordion', elem: 'short'},
-                            {block: 'list', elem: 'item', elemMods: {'vertical-align': 'center'}}
+                            {block: 'list', elem: 'item', elemMods: {'vertical-align': 'center', 'indent-t': 'm'}}
                           ],
                           content: [
                             { block: 'history',
@@ -869,7 +873,7 @@ module.exports.bemjson = {
                           elem: 'show',
                           mix: [
                             {block: 'e-accordion', elem: 'short'},
-                            {block: 'list', elem: 'item', elemMods: {'vertical-align': 'center'}}
+                            {block: 'list', elem: 'item', elemMods: {'vertical-align': 'center', 'indent-t': 'm'}}
                           ],
                           content: [
                             { block: 'history',
@@ -1039,7 +1043,7 @@ module.exports.bemjson = {
                           elem: 'show',
                           mix: [
                             {block: 'e-accordion', elem: 'short'},
-                            {block: 'list', elem: 'item', elemMods: {'vertical-align': 'center'}}
+                            {block: 'list', elem: 'item', elemMods: {'vertical-align': 'center', 'indent-t': 'm'}}
                           ],
                           content: [
                             { block: 'history',

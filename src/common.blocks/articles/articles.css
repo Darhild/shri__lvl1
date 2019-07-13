@@ -1,3 +1,5 @@
+@import "../../library.blocks/theme.blocks/theme/_breakpoint_default/theme_breakpoint_default.css";
+
 .articles {
 
   &__pic {
@@ -8,5 +10,12 @@
 
   &__title {
     margin-bottom: var(--space-xs);
+  }
+}
+
+@media screen and (max-width: $screen-desktop) {
+
+  .articles {
+    grid-column-end: span 10;
   }
 }

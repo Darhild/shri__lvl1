@@ -20,7 +20,7 @@ module.exports.bemjson = {
               elem: 'pic',
               mix: [
                 { block: 'theme', mods: {'color': 'project-inverse'}},
-                { block: 'icon-plus', elem: 'icon', mods: {'indent-r': 'm'}},
+                { block: 'icon-plus', elem: 'icon', elemMods: {'indent-r': 'm'}},
                 { block: 'image'}
               ]
             },
@@ -108,7 +108,7 @@ module.exports.bemjson = {
               elem: 'pic',
               mix: [
                 { block: 'theme', mods: {'color': 'project-inverse'}},
-                { block: 'icon-plus', elem: 'icon', mods: {'indent-r': 'm'}},
+                { block: 'icon-plus', elem: 'icon', elemMods: {'indent-r': 'm'}},
                 { block: 'image'}
               ]
             },
@@ -196,7 +196,7 @@ module.exports.bemjson = {
               elem: 'pic',
               mix: [
                 { block: 'theme', mods: {'color': 'project-inverse'}},
-                { block: 'icon-plus', elem: 'icon', mods: {'indent-r': 'm'}},
+                { block: 'icon-plus', elem: 'icon', elemMods: {'indent-r': 'm'}},
                 { block: 'image'}
               ]
             },

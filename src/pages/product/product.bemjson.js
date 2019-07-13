@@ -1,7 +1,7 @@
 module.exports.bemjson = {
-  block: "page",
+  block: "page-product",
   mix: [
-    {block: 'page-product'}
+    {block: 'theme', mods: {'color': 'project-default', 'size': 'default', 'space': 'default', 'gap': 'small'}}
   ],
   content: [
     { block: 'header',
@@ -35,7 +35,7 @@ module.exports.bemjson = {
       content: [
         { block: 'layout',
           elem: 'container',
-          elemMods: {'align': 'center', 'size': 'm', 'indent-b': 'xxl'},
+          elemMods: {'align': 'center', 'size': 'm', 'indent-b': 'xxxxl'},
           content: [
             { block: 'grid',
               mods: {'m-columns': '12', 'col-gap': 'full'},
@@ -521,7 +521,7 @@ module.exports.bemjson = {
                     { block: 'page-product',
                       elem: 'text',
                       mix: [
-                        {block: 'text', mods: {'view': 'primary', 'size': 'm', 'type': 'p'}}
+                        {block: 'text', mods: {'view': 'primary', 'size': 'm'}}
                       ],
                       content: [
                         { block: 'text',

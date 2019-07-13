@@ -1,3 +1,5 @@
+@import "../../library.blocks/theme.blocks/theme/_breakpoint_default/theme_breakpoint_default.css";
+
 .warning {
   display: flex;
   flex-direction: column;
@@ -15,5 +17,11 @@
   &__text {
     justify-content: center;
   }
+}
 
+@media screen and (max-width: $screen-desktop) {
+
+  .warning {
+    grid-column-end: span 10;
+  }
 }

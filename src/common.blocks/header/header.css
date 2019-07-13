@@ -19,3 +19,11 @@
     background-color: var(--color-text-primary);
   }
 }
+
+@media screen and (max-width: $screen-desktop) {
+
+  .header {
+    padding-right: var(--gap);
+    padding-left: var(--gap);
+  }
+}

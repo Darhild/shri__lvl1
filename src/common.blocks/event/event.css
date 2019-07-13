@@ -1,3 +1,5 @@
+@import "../../library.blocks/theme.blocks/theme/_breakpoint_default/theme_breakpoint_default.css";
+
 .event {
   min-height: 333px;
 
@@ -13,5 +15,12 @@
 
   &__title {
     margin-bottom: var(--space-s);
+  }
+}
+
+@media screen and (max-width: $screen-desktop) {
+
+  .event {
+    grid-column-end: span 10;
   }
 }

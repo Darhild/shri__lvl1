@@ -1,3 +1,12 @@
+@import "../../../theme.blocks/theme/_breakpoint_default/theme_breakpoint_default.css";
+
 .grid_row-gap_full {
-   grid-row-gap:  var(--gap);
+  grid-row-gap: var(--gap);
+}
+
+@media screen and (max-width: $screen-desktop) {
+
+  .grid_row-gap_full {
+    grid-row-gap: 0;
+  }
 }

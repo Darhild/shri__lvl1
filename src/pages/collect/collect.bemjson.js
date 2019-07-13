@@ -1,7 +1,7 @@
 module.exports.bemjson = {
-  block: "page",
+  block: "page-collect",
   mix: [
-    {block: 'page-collect'}
+    {block: 'theme', mods: {'color': 'project-default', 'size': 'default', 'space': 'default', 'gap': 'small'}}
   ],
   content: [
     { block: 'header',
@@ -54,7 +54,7 @@ module.exports.bemjson = {
                       mix: [
                         { block: 'card', elem: 'content'},
                         { block: 'image' },
-                        {block: 'theme', mods: {'color': 'project-default'}}
+                        { block: 'theme', mods: {'color': 'project-default'}}
                       ]
                     },
                     { block: 'collect',
@@ -62,7 +62,109 @@ module.exports.bemjson = {
                       content: [
                         { block: 'collect',
                           elem: 'done',
-                          mods: {'size': 'two-third'}
+                          elemMods: {'size': 'two-third'}
+                        }
+                      ]
+                    },
+                    { block: 'collect',
+                      elem: 'footer',
+                      mix: [
+                        { block: 'card', elem: 'footer', elemMods: {'space-a': 'l'}}
+                      ],
+                      content: [
+                        { block: 'collect',
+                          elem: 'title',
+                          mix: [
+                            {block: 'text', mods: {'view': 'primary', 'size': 'l'}}
+                          ],
+                          content: [
+                            { block: 'text',
+                              elem: 'word',
+                              elemMods: {'width': 'l'}
+                            },
+                            { block: 'text',
+                              elem: 'word',
+                              elemMods: {'width': 'm'}
+                            }
+                          ]
+                        },
+                        { block: 'collect',
+                          elem: 'description',
+                          mix: [
+                            {block: 'text', mods: {'view': 'secondary', 'size': 'm'}}
+                          ],
+                          content: [
+                            { block: 'text',
+                              elem: 'word',
+                              elemMods: {'width': 's'}
+                            },
+                            { block: 'text',
+                              elem: 'word',
+                              elemMods: {'width': 'l'}
+                            },
+                            { block: 'text',
+                              elem: 'word',
+                              elemMods: {'width': 'm'}
+                            },
+                            { block: 'text',
+                              elem: 'word',
+                              elemMods: {'width': 's'}
+                            },
+                            { block: 'text',
+                              elem: 'word',
+                              elemMods: {'width': 's'}
+                            },
+                            { block: 'text',
+                              elem: 'word',
+                              elemMods: {'width': 'l'}
+                            },
+                            { block: 'text',
+                              elem: 'word',
+                              elemMods: {'width': 'm'}
+                            },
+                            { block: 'text',
+                              elem: 'word',
+                              elemMods: {'width': 'm'}
+                            },
+                            { block: 'text',
+                              elem: 'word',
+                              elemMods: {'width': 'l'}
+                            },
+                            { block: 'text',
+                              elem: 'word',
+                              elemMods: {'width': 'l'}
+                            },
+                            { block: 'text',
+                              elem: 'word',
+                              elemMods: {'width': 's'}
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                { block: 'collect',
+                  mix: [
+                    {block: 'grid', elem: 'fraction', elemMods: {'m-col': '3'}},
+                    {block: 'card', mods: {'view': 'default','border': 'all'}},
+                    {block: 'theme', mods: {'color': 'project-inverse'}}
+                  ],
+                  content: [
+                    { block: 'collect',
+                      elem: 'image',
+                      mix: [
+                        { block: 'card', elem: 'content'},
+                        { block: 'image' },
+                        { block: 'theme', mods: {'color': 'project-default'}}
+                      ]
+                    },
+                    { block: 'collect',
+                      elem: 'progress',
+                      content: [
+                        { block: 'collect',
+                          elem: 'done',
+                          elemMods: {'size': 'one-third'}
                         }
                       ]
                     },
@@ -164,7 +266,7 @@ module.exports.bemjson = {
                       content: [
                         { block: 'collect',
                           elem: 'done',
-                          mods: {'size': 'one-third'}
+                          elemMods: {'size': 'half'}
                         }
                       ]
                     },
@@ -258,7 +360,7 @@ module.exports.bemjson = {
                       mix: [
                         { block: 'card', elem: 'content'},
                         { block: 'image' },
-                        {block: 'theme', mods: {'color': 'project-default'}}
+                        { block: 'theme', mods: {'color': 'project-default'}}
                       ]
                     },
                     { block: 'collect',
@@ -266,109 +368,7 @@ module.exports.bemjson = {
                       content: [
                         { block: 'collect',
                           elem: 'done',
-                          mods: {'size': 'half'}
-                        }
-                      ]
-                    },
-                    { block: 'collect',
-                      elem: 'footer',
-                      mix: [
-                        { block: 'card', elem: 'footer', elemMods: {'space-a': 'l'}}
-                      ],
-                      content: [
-                        { block: 'collect',
-                          elem: 'title',
-                          mix: [
-                            {block: 'text', mods: {'view': 'primary', 'size': 'l'}}
-                          ],
-                          content: [
-                            { block: 'text',
-                              elem: 'word',
-                              elemMods: {'width': 'l'}
-                            },
-                            { block: 'text',
-                              elem: 'word',
-                              elemMods: {'width': 'm'}
-                            }
-                          ]
-                        },
-                        { block: 'collect',
-                          elem: 'description',
-                          mix: [
-                            {block: 'text', mods: {'view': 'secondary', 'size': 'm'}}
-                          ],
-                          content: [
-                            { block: 'text',
-                              elem: 'word',
-                              elemMods: {'width': 's'}
-                            },
-                            { block: 'text',
-                              elem: 'word',
-                              elemMods: {'width': 'l'}
-                            },
-                            { block: 'text',
-                              elem: 'word',
-                              elemMods: {'width': 'm'}
-                            },
-                            { block: 'text',
-                              elem: 'word',
-                              elemMods: {'width': 's'}
-                            },
-                            { block: 'text',
-                              elem: 'word',
-                              elemMods: {'width': 's'}
-                            },
-                            { block: 'text',
-                              elem: 'word',
-                              elemMods: {'width': 'l'}
-                            },
-                            { block: 'text',
-                              elem: 'word',
-                              elemMods: {'width': 'm'}
-                            },
-                            { block: 'text',
-                              elem: 'word',
-                              elemMods: {'width': 'm'}
-                            },
-                            { block: 'text',
-                              elem: 'word',
-                              elemMods: {'width': 'l'}
-                            },
-                            { block: 'text',
-                              elem: 'word',
-                              elemMods: {'width': 'l'}
-                            },
-                            { block: 'text',
-                              elem: 'word',
-                              elemMods: {'width': 's'}
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                { block: 'collect',
-                  mix: [
-                    {block: 'grid', elem: 'fraction', elemMods: {'m-col': '3'}},
-                    {block: 'card', mods: {'view': 'default','border': 'all'}},
-                    {block: 'theme', mods: {'color': 'project-inverse'}}
-                  ],
-                  content: [
-                    { block: 'collect',
-                      elem: 'image',
-                      mix: [
-                        { block: 'card', elem: 'content'},
-                        { block: 'image' },
-                        {block: 'theme', mods: {'color': 'project-default'}}
-                      ]
-                    },
-                    { block: 'collect',
-                      elem: 'progress',
-                      content: [
-                        { block: 'collect',
-                          elem: 'done',
-                          mods: {'size': 'two-third'}
+                          elemMods: {'size': 'two-third'}
                         }
                       ]
                     },
@@ -458,7 +458,7 @@ module.exports.bemjson = {
     },
     { block: 'page',
       elem: 'section',
-      mods: {'space-v': 'xxl'},
+      elemMods: {'space-t': 'xxl'},
       mix: [
         {block: 'layout'}
       ],
@@ -492,7 +492,7 @@ module.exports.bemjson = {
                               elem: 'pic',
                               mix: [
                                 { block: 'theme', mods: {'color': 'project-inverse'}},
-                                { block: 'icon-plus', elem: 'icon', mods: {'indent-r': 'm'}},
+                                { block: 'icon-plus', elem: 'icon', elemMods: {'indent-r': 'm'}},
                                 { block: 'image'}
                               ]
                             },
@@ -580,7 +580,7 @@ module.exports.bemjson = {
                               elem: 'pic',
                               mix: [
                                 { block: 'theme', mods: {'color': 'project-inverse'}},
-                                { block: 'icon-plus', elem: 'icon', mods: {'indent-r': 'm'}},
+                                { block: 'icon-plus', elem: 'icon', elemMods: {'indent-r': 'm'}},
                                 { block: 'image'}
                               ]
                             },
@@ -668,7 +668,7 @@ module.exports.bemjson = {
                               elem: 'pic',
                               mix: [
                                 { block: 'theme', mods: {'color': 'project-inverse'}},
-                                { block: 'icon-plus', elem: 'icon', mods: {'indent-r': 'm'}},
+                                { block: 'icon-plus', elem: 'icon', elemMods: {'indent-r': 'm'}},
                                 { block: 'image'}
                               ]
                             },
@@ -766,7 +766,7 @@ module.exports.bemjson = {
                     { block: 'offer',
                       elem: 'footer',
                       mix: [
-                      { block: 'card', elem: 'footer', mods: {'space-a': 'xl'}}
+                      { block: 'card', elem: 'footer', elemMods: {'space-a': 'xl'}}
                       ],
                       content: [
                        { block: 'offer',
@@ -847,7 +847,7 @@ module.exports.bemjson = {
                     { block: 'subscription',
                       elem: 'info',
                       mix: [
-                        { block: 'card', elem: 'content', mods: {'space-a': 'xl'}}
+                        { block: 'card', elem: 'content', elemMods: {'space-a': 'xl'}}
                       ],
                       content: [
                         { block: 'subscription',
@@ -967,13 +967,13 @@ module.exports.bemjson = {
                     { block: 'subscription',
                       elem: 'footer',
                       mix: [
-                        { block: 'card', elem: 'footer', mods: {'space-a': 'xl'}}
+                        { block: 'card', elem: 'footer', elemMods: {'space-a': 'xl'}}
                       ],
                       content: [
                         { block: 'subscription',
                           elem: 'control',
                           mix: [
-                           { block: 'list', elem: 'item', mods: {'space-b': 's'}}
+                           { block: 'list', elem: 'item', elemMods: {'space-b': 's'}}
                           ],
                           content: [
                             { block: 'subscription',

@@ -8,7 +8,7 @@
 
   .layout__container {
 
-    padding-right: var(--space-m);
-    padding-left: var(--space-m);
+    padding-right: var(--gap);
+    padding-left: var(--gap);
   }
 }

@@ -1,3 +1,5 @@
+@import "../../library.blocks/theme.blocks/theme/_breakpoint_default/theme_breakpoint_default.css";
+
 .collect {
   min-height: 380px;
   border-width: 3px;
@@ -36,5 +38,12 @@
   &__footer {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: $screen-desktop) {
+
+  .collect {
+    grid-column-end: span 6;
   }
 }

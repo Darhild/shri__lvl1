@@ -1,12 +1,28 @@
+@import "../../library.blocks/theme.blocks/theme/_breakpoint_default/theme_breakpoint_default.css";
+
 .history {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-width: 3px;
 
   &__transaction {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border-width: 3px;
 
     &:last-child {
       border: none;
     }
+  }
+
+  &__show {
+    flex: 1;
+  }
+
+  &__hide {
+    flex: 1;
   }
 
   &__details {
@@ -21,5 +37,20 @@
 
   &__sum {
     margin-left: auto;
+  }
+
+  .list__item:first-child {
+    margin-top: 0;
+  }
+
+  .list__item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: $screen-desktop) {
+
+  .history {
+    grid-column-end: span 12;
   }
 }

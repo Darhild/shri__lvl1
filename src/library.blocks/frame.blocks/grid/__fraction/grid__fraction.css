@@ -3,5 +3,10 @@
 @media screen and (max-width: $screen-desktop) {
   .grid__fraction {
     grid-column-start: 1;
+    margin-bottom: var(--gap);
+
+    &:last-child {
+      margin-bottom: 0;
+    };
   }
 }

@@ -1,3 +1,5 @@
+@import "../../library.blocks/theme.blocks/theme/_breakpoint_default/theme_breakpoint_default.css";
+
 .cover {
   min-height: 408px;
 
@@ -6,5 +8,12 @@
     margin-bottom: var(--space-m);
     background-color: transparent;
     border-width: 3px;
+  }
+}
+
+@media screen and (max-width: $screen-desktop) {
+
+  .cover {
+    grid-column-end: span 8;
   }
 }
