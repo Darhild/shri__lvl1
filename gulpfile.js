@@ -11,14 +11,14 @@ const rename = require('gulp-rename');
 const bemjson = require('gulp-bemjson');
 var server = require("browser-sync").create();
 
-const library = [
+const files = [
   './src/library.blocks/theme.blocks/**/*.css', // Тема
   './src/library.blocks/frame.blocks/**/*.css', // Каркас
   './src/library.blocks/pattern.blocks/**/*.css', // Паттерны
   './src/library.blocks/content.blocks/**/*.css',  // Контент
+  './src/common.blocks/**/*.css', // Контент пользователя
+  './src/pages/**/*.css' // Страницы
 ];
-
-const userBlocks = './src/common.blocks/**/*.css'; // Контент пользователя
 
 gulp.task('css', () =>  {
   let plugins = [
@@ -27,49 +27,13 @@ gulp.task('css', () =>  {
     postcssNested(),
     next()
   ];
-  return gulp.src(library)
+  return gulp.src(files)
     .pipe(postcss(plugins))
-    .pipe(concat('library.css'))
+    .pipe(concat('style.css'))
     .pipe(gulp.dest('./css'))
-//    .pipe(csso())
-//    .pipe(rename({ suffix: '.min' }))
-//    .pipe(gulp.dest('./css'));
-    .pipe(server.stream());
-});
-
-gulp.task('csspages', () =>  {
-  let plugins = [
-    postcssImport(),
-    postcssSimpleVars(),
-    postcssNested(),
-    next()
-  ];
-  return gulp.src('./src/pages/**/*.css')
-    .pipe(postcss(plugins))
-    .pipe(concat('pages.css'))
+    .pipe(csso())
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('./css'))
-//    .pipe(csso())
-//    .pipe(rename({ suffix: '.min' }))
-//    .pipe(gulp.dest('./css'));
-    .pipe(server.stream());
-});
-
-
-gulp.task('csscommon', () =>  {
-  let plugins = [
-    postcssImport(),
-    postcssSimpleVars(),
-    postcssNested(),
-    next()
-  ];
-  return gulp.src(userBlocks)
-    .pipe(plumber())
-    .pipe(postcss(plugins))
-    .pipe(concat('user.css'))
-    .pipe(gulp.dest('./css'))
-//    .pipe(csso())
-//    .pipe(rename({ suffix: '.min' }))
-//    .pipe(gulp.dest('./css'))
     .pipe(server.stream());
 });
 
@@ -90,9 +54,7 @@ gulp.task("serve", function () {
     ui: false
   });
 
-  gulp.watch("./src/common.blocks/**/*.css", gulp.series("csscommon"));
+  gulp.watch("./src/**/*.css", gulp.series("css"));
   gulp.watch("./src/**/*.bemjson.js", gulp.series("json"));
-  gulp.watch("./src/library.blocks/**/*.css", gulp.series("css"));
-  gulp.watch("./src/pages/**/*.css", gulp.series("csspages"));
   gulp.watch("*.html").on("change", server.reload);
 });
