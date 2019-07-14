@@ -15,13 +15,13 @@ export default function createHTML (obj) {
     else string += " ";
 
     if (obj.mods) {
-      for (prop in obj.mods) {
+      for (let prop in obj.mods) {
         string += `${obj.block}_${prop}_${obj.mods[prop]} `
       }
     }
 
     if (obj.elemMods) {
-      for (prop in obj.elemMods) {
+      for (let prop in obj.elemMods) {
         string += `${obj.block}__${obj.elem}_${prop}_${obj.elemMods[prop]} `
       }
     }
