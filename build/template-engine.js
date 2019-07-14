@@ -3,7 +3,7 @@
 * @return {string} HTML разметка страницы
 */
 
-export default function createHTML (obj) {
+export default function (obj) {
   let string = "";
   createDiv (obj);
   return string;
