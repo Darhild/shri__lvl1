@@ -9,7 +9,7 @@ export default function (obj) {
   return string;
 
   function createClassName (obj) {
-    string += `${obj.block}`;
+    if (obj.block) string += `${obj.block}`;
 
     if (obj.elem) string += `__${obj.elem} `;
     else string += " ";
