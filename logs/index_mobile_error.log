@@ -1,0 +1,11 @@
+TypeError: obj.mix.forEach is not a function
+    at createClassName (webpack-internal:///./static/Darhild/template-engine.js:31:18)
+    at createDiv (webpack-internal:///./static/Darhild/template-engine.js:38:5)
+    at eval (webpack-internal:///./static/Darhild/template-engine.js:44:39)
+    at Array.forEach (<anonymous>)
+    at createDiv (webpack-internal:///./static/Darhild/template-engine.js:44:22)
+    at eval (webpack-internal:///./static/Darhild/template-engine.js:44:39)
+    at Array.forEach (<anonymous>)
+    at createDiv (webpack-internal:///./static/Darhild/template-engine.js:44:22)
+    at eval (webpack-internal:///./static/Darhild/template-engine.js:44:39)
+    at Array.forEach (<anonymous>)
