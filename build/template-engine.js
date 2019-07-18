@@ -9,25 +9,25 @@ export default function (obj) {
   return string;
 
   function createClassName (obj) {
-    if (obj.block) string += `${obj.block}`;
+    if (obj["block"]) string += `${obj["block"]}`;
 
-    if (obj.elem) string += `__${obj.elem} `;
+    if (obj["elem"]) string += `__${obj["elem"]} `;
     else string += " ";
 
-    if (obj.mods) {
-      for (let prop in obj.mods) {
-        string += `${obj.block}_${prop}_${obj.mods[prop]} `
+    if (obj["mods"]) {
+      for (let prop in obj["mods"]) {
+        string += `${obj["block"]}_${prop}_${obj["mods"][prop]} `
       }
     }
 
-    if (obj.elemMods) {
-      for (let prop in obj.elemMods) {
-        string += `${obj.block}__${obj.elem}_${prop}_${obj.elemMods[prop]} `
+    if (obj["elemMods"]) {
+      for (let prop in obj["elemMods"]) {
+        string += `${obj["block"]}__${obj["elem"]}_${prop}_${obj["elemMods"][prop]} `
       }
     }
 
-    if (obj.mix) {
-      obj.mix.forEach(block => createClassName(block));
+    if (obj["mix"]) {
+      obj["mix"].forEach(block => createClassName(block));
     }
   }
 
@@ -39,13 +39,11 @@ export default function (obj) {
     string += `">`;
 
     if (obj.content) {
-      if (Array.isArray(obj.content)) {
-      obj.content.forEach(block => createDiv(block));
+      if (Array.isArray(obj["content"])) {
+      obj["content"].forEach(block => createDiv(block));
       }
-      else createDiv(obj.content)
+      else createDiv(obj["content"])
     }
     string += `</div>`;
   }
 }
-
-
