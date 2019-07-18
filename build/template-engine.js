@@ -27,7 +27,10 @@ export default function (obj) {
     }
 
     if (obj["mix"]) {
+      if (Array.isArray(obj["mix"])) {
       obj["mix"].forEach(block => createClassName(block));
+      }
+      else createClassName(obj["mix"])
     }
   }
 
@@ -38,7 +41,7 @@ export default function (obj) {
     string = string.trim();
     string += `">`;
 
-    if (obj.content) {
+    if (obj["content"]) {
       if (Array.isArray(obj["content"])) {
       obj["content"].forEach(block => createDiv(block));
       }
