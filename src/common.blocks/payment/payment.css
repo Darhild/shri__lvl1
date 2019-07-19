@@ -1,7 +1,6 @@
 @import "../../library.blocks/theme.blocks/theme/_breakpoint_default/theme_breakpoint_default.css";
 
 .payment {
-  display: inline-block;
   background-color: var(--color-bg-default);
   border-width: 3px;
 
@@ -15,6 +14,10 @@
 
   &__control {
     flex-grow: 1;
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
   }
 
   .input {

@@ -1,6 +1,7 @@
 @import "../../library.blocks/theme.blocks/theme/_breakpoint_default/theme_breakpoint_default.css";
 
 .commercial {
+  align-self: flex-start;
   min-height: 430px;
   border-width: 3px;
 
