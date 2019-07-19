@@ -1,5 +1,4 @@
 .onoffswitch {
-  display: none;
   width: 97px;
   height: 32px;
   padding: 2px;
@@ -17,8 +16,4 @@
 
 .theme_color_project-inverse .onoffswitch {
   text-align: left;
-}
-
-.page-index .onoffswitch {
-  display: block;
 }

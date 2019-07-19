@@ -10,10 +10,3 @@
     border-width: 3px;
   }
 }
-
-@media screen and (max-width: $screen-desktop) {
-
-  .cover {
-    grid-column-end: span 8;
-  }
-}

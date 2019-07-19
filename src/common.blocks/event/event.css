@@ -17,10 +17,3 @@
     margin-bottom: var(--space-s);
   }
 }
-
-@media screen and (max-width: $screen-desktop) {
-
-  .event {
-    grid-column-end: span 10;
-  }
-}

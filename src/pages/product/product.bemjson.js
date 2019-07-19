@@ -1,8 +1,5 @@
 module.exports.bemjson = {
   block: "page-product",
-  mix: [
-    {block: 'theme', mods: {'color': 'project-default', 'size': 'default', 'space': 'default', 'gap': 'small'}}
-  ],
   content: [
     { block: 'header',
       content: [

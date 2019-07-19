@@ -5,6 +5,8 @@
   --gap-half: calc(var(--gap) * 0.5); 
 }
 
-  @media screen and (max-width: $screen-desktop) {
-    :root { --gap: var(--space-xxxl) };
+@media screen and (max-width: $screen-desktop) {
+  .theme_gap_small { 
+    --gap: var(--space-m)
+  };
 }

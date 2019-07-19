@@ -3,9 +3,6 @@
 const pages = {
   pageProduct: {
     block: "page-product",
-    mix: [
-      {block: 'theme', mods: {'color': 'project-default', 'size': 'default', 'space': 'default', 'gap': 'small'}}
-    ],
     content: [
       { block: 'header',
         content: [
@@ -1003,9 +1000,6 @@ const pages = {
   },
   pageCollect: {
     block: "page-collect",
-    mix: [
-      {block: 'theme', mods: {'color': 'project-default', 'size': 'default', 'space': 'default', 'gap': 'small'}}
-    ],
     content: [
       { block: 'header',
         content: [
@@ -2044,39 +2038,36 @@ const pages = {
   },
   pageIndex: {
     block: 'page-index',
-    mix: [
-      {block: 'theme', mods: {'color': 'project-default', 'size': 'default', 'space': 'default', 'gap': 'small'}}
-    ],
     content: [
-      { block: 'header',
-        content: [
-         { block: 'header',
-           elem: 'content',
-           content: [
-             { block: 'header',
-               elem: 'logo'
-             },
-             { block: 'header',
-               elem: 'onoffswitch',
-               mix: [
-                 {block: 'onoffswitch'}
-               ],
-               content: [
-                 { block: 'onoffswitch',
-                   elem: 'button'
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
       { block: 'page-index',
         elem: 'layout',
         mix: [
           {block: 'layout'}
         ],
         content: [
+          { block: 'header',
+            content: [
+            { block: 'header',
+              elem: 'content',
+              content: [
+                { block: 'header',
+                  elem: 'logo'
+                },
+                { block: 'header',
+                  elem: 'onoffswitch',
+                  mix: [
+                    {block: 'onoffswitch'}
+                  ],
+                  content: [
+                    { block: 'onoffswitch',
+                      elem: 'button'
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
           { block: 'layout',
             elem: 'container',
             elemMods: {'align': 'center', 'size': 'm', 'indent-b': 'xxl'},
@@ -2143,7 +2134,7 @@ const pages = {
                           { block: 'payment',
                             elem: 'item',
                             mix: [
-                              {block: 'form', elem: 'item', elemMods: {'distribute': 'between', 'vertical-align': 'center'}}
+                              {block: 'form', elem: 'item', elemMods: {'indent-b': 'xl', 'distribute': 'between', 'vertical-align': 'center'}}
                             ],
                             content: [
                               { block: 'payment',
@@ -3343,53 +3334,50 @@ const pages = {
                 ]
               }
             ]
-          }
-        ]
-      },
-      { block: 'footer',
-        content: [
+          },
           { block: 'footer',
-            elem: 'content',
             content: [
               { block: 'footer',
-                elem: 'text',
-                mix: [
-                  {block: 'text', mods: {'view': 'primary', 'size': 'l'}}
-                ],
+                elem: 'content',
                 content: [
-                  { block: 'text',
-                    elem: 'word',
-                    elemMods: {'width': 'l'}
+                  { block: 'footer',
+                    elem: 'text',
+                    mix: [
+                      {block: 'text', mods: {'view': 'primary', 'size': 'l'}}
+                    ],
+                    content: [
+                      { block: 'text',
+                        elem: 'word',
+                        elemMods: {'width': 'l'}
+                      },
+                      { block: 'text',
+                        elem: 'word',
+                        elemMods: {'width': 's'}
+                      }
+                    ]
                   },
-                  { block: 'text',
-                    elem: 'word',
-                    elemMods: {'width': 's'}
-                  }
-                ]
-              },
-              { block: 'footer',
-                elem: 'text',
-                mix: [
-                  {block: 'text', mods: {'view': 'primary', 'size': 'l'}}
-                ],
-                content: [
-                  { block: 'text',
-                    elem: 'word',
-                    elemMods: {'width': 'l'}
+                  { block: 'footer',
+                    elem: 'text',
+                    mix: [
+                      {block: 'text', mods: {'view': 'primary', 'size': 'l'}}
+                    ],
+                    content: [
+                      { block: 'text',
+                        elem: 'word',
+                        elemMods: {'width': 'l'}
+                      }
+                    ]
                   }
                 ]
               }
             ]
           }
         ]
-      }
+      }      
     ]
   },
   pageContent: {
     block: "page-content",
-    mix: [
-      {block: 'theme', mods: {'color': 'project-default', 'size': 'default', 'space': 'default', 'gap': 'small'}}
-    ],
     content: [
       { block: 'header',
         content: [

@@ -38,10 +38,3 @@
     }
   }
 }
-
-@media screen and (max-width: $screen-desktop) {
-
-  .commercial {
-    grid-column-end: span 8;
-  }
-}
