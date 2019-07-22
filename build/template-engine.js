@@ -4,7 +4,7 @@
 */
 
 export default function (obj) {
-  try {
+  if(obj) {
     let string = "";
     createDiv (obj);
     return string;
@@ -27,25 +27,17 @@ export default function (obj) {
         }
       }
 
-      if (obj["mix"]) processMix(obj["mix"]);
+      if (obj["mix"]) processContent(obj["mix"], createClassName);
     }
 
-    function processMix(obj) {
-      if (Array.isArray(obj)) {
-        obj.forEach(block => {
-          processMix(block);
-        })
-      }
-      else createClassName(obj);
-    }
 
-    function processContent(obj) {
+    function processContent(obj, callback) {
       if (Array.isArray(obj)) {
         obj.forEach(block => {
-          processContent(block);
+          processContent(block, callback);
         })
       }
-      else createDiv(obj);
+      else callback.call(this, ...arguments);
     }
 
     function createDiv (obj) {
@@ -55,13 +47,13 @@ export default function (obj) {
       string = string.trim();
       string += `">`;
 
-      if (obj["content"]) processContent(obj["content"]);
+      if (obj["content"]) processContent(obj["content"], createDiv);
 
       string += `</div>`;
     }
   }
 
-  catch (err) {
-    throw new Error(err)  
+  else {
+    console.log("В элементе должно быть указано поле block")
   }
 }
