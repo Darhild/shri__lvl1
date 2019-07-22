@@ -56,11 +56,3 @@ export default function (obj) {
     string += `</div>`;
   }
 }
-
-const page = document.body.dataset.attr;
-
-const div = document.createElement('div');
-
-for (let prop in pages) {
-  if (prop === page) div.innerHTML = template(pages[prop]);
-}
