@@ -1,0 +1,11 @@
+TypeError: Cannot read property 'dataset' of null
+    at eval (webpack-internal:///./static/Darhild/template-engine.js:61:28)
+    at Module../static/Darhild/template-engine.js (file:///opt/buildagent/work/e163812401825360/screenshots/static/Darhild/build/template-engine.js:144:1)
+    at __webpack_require__ (file:///opt/buildagent/work/e163812401825360/screenshots/static/Darhild/build/template-engine.js:20:30)
+    at eval (webpack-internal:///./static/index.js:2:73)
+    at Module../static/index.js (file:///opt/buildagent/work/e163812401825360/screenshots/static/Darhild/build/template-engine.js:156:1)
+    at __webpack_require__ (file:///opt/buildagent/work/e163812401825360/screenshots/static/Darhild/build/template-engine.js:20:30)
+    at Object.0 (file:///opt/buildagent/work/e163812401825360/screenshots/static/Darhild/build/template-engine.js:222:18)
+    at __webpack_require__ (file:///opt/buildagent/work/e163812401825360/screenshots/static/Darhild/build/template-engine.js:20:30)
+    at file:///opt/buildagent/work/e163812401825360/screenshots/static/Darhild/build/template-engine.js:84:18
+    at file:///opt/buildagent/work/e163812401825360/screenshots/static/Darhild/build/template-engine.js:87:10
