@@ -26,12 +26,16 @@ export default function (obj) {
       }
     }
 
-    if (obj["mix"]) {
-      if (Array.isArray(obj["mix"])) {
-      obj["mix"].forEach(block => createClassName(block));
-      }
-      else createClassName(obj["mix"])
+    if (obj["mix"]) processMix(obj["mix"]);
+  }
+
+  function processMix(obj) {
+    if (Array.isArray(obj)) {
+      obj.forEach(block => {
+        processMix(block);
+      })
     }
+    else createClassName(obj);
   }
 
   function processContent(obj) {
@@ -50,9 +54,8 @@ export default function (obj) {
     string = string.trim();
     string += `">`;
 
-    if (obj["content"]) {
-      processContent(obj["content"]);
-    }
+    if (obj["content"]) processContent(obj["content"]);
+
     string += `</div>`;
   }
 }
