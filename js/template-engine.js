@@ -4539,32 +4539,44 @@ const pages = {
 * @return {string} HTML разметка страницы
 */
 
-function template (obj) {
+function template(obj) {
   let string = "";
   createDiv (obj);
   return string;
 
   function createClassName (obj) {
-    string += `${obj.block}`;
+    if (obj["block"]) string += `${obj["block"]}`;
 
-    if (obj.elem) string += `__${obj.elem} `;
+    if (obj["elem"]) string += `__${obj["elem"]} `;
     else string += " ";
 
-    if (obj.mods) {
-      for (let prop in obj.mods) {
-        string += `${obj.block}_${prop}_${obj.mods[prop]} `
+    if (obj["mods"]) {
+      for (let prop in obj["mods"]) {
+        string += `${obj["block"]}_${prop}_${obj["mods"][prop]} `
       }
     }
 
-    if (obj.elemMods) {
-      for (let prop in obj.elemMods) {
-        string += `${obj.block}__${obj.elem}_${prop}_${obj.elemMods[prop]} `
+    if (obj["elemMods"]) {
+      for (let prop in obj["elemMods"]) {
+        string += `${obj["block"]}__${obj["elem"]}_${prop}_${obj["elemMods"][prop]} `
       }
     }
 
-    if (obj.mix) {
-      obj.mix.forEach(block => createClassName(block));
+    if (obj["mix"]) {
+      if (Array.isArray(obj["mix"])) {
+      obj["mix"].forEach(block => createClassName(block));
+      }
+      else createClassName(obj["mix"])
     }
+  }
+
+  function processContent(obj) {
+    if (Array.isArray(obj)) {
+      obj.forEach(block => {
+        processContent(block);
+      })
+    }
+    else createDiv(obj);
   }
 
   function createDiv (obj) {
@@ -4574,11 +4586,8 @@ function template (obj) {
     string = string.trim();
     string += `">`;
 
-    if (obj.content) {
-      if (Array.isArray(obj.content)) {
-      obj.content.forEach(block => createDiv(block));
-      }
-      else createDiv(obj.content)
+    if (obj["content"]) {
+      processContent(obj["content"]);
     }
     string += `</div>`;
   }

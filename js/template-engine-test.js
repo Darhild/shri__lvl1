@@ -34,6 +34,17 @@ export default function (obj) {
     }
   }
 
+  function processContent(obj, string) {
+    if (Array.isArray(obj)) {
+      obj.forEach(block => {
+        processContent(obj, string);
+      }
+    }
+    else processContent(obj, string);
+
+    return string;
+  }
+
   function createDiv (obj) {
     string += `<div class="`;
 
@@ -42,10 +53,8 @@ export default function (obj) {
     string += `">`;
 
     if (obj["content"]) {
-      if (Array.isArray(obj["content"])) {
-      obj["content"].forEach(block => createDiv(block));
-      }
-      else createDiv(obj["content"])
+      let content = "";
+      string += processContent(obj["content"], content);
     }
     string += `</div>`;
   }

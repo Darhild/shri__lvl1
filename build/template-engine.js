@@ -34,6 +34,15 @@ export default function (obj) {
     }
   }
 
+  function processContent(obj) {
+    if (Array.isArray(obj)) {
+      obj.forEach(block => {
+        processContent(block);
+      })
+    }
+    else createDiv(obj);
+  }
+
   function createDiv (obj) {
     string += `<div class="`;
 
@@ -42,11 +51,16 @@ export default function (obj) {
     string += `">`;
 
     if (obj["content"]) {
-      if (Array.isArray(obj["content"])) {
-      obj["content"].forEach(block => createDiv(block));
-      }
-      else createDiv(obj["content"])
+      processContent(obj["content"]);
     }
     string += `</div>`;
   }
+}
+
+const page = document.body.dataset.attr;
+
+const div = document.createElement('div');
+
+for (let prop in pages) {
+  if (prop === page) div.innerHTML = template(pages[prop]);
 }
