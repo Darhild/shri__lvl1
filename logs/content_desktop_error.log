@@ -1,0 +1,11 @@
+TypeError: Cannot read property 'block' of null
+    at createClassName (webpack-internal:///./static/Darhild/template-engine.js:13:12)
+    at createDiv (webpack-internal:///./static/Darhild/template-engine.js:54:5)
+    at processContent (webpack-internal:///./static/Darhild/template-engine.js:48:10)
+    at eval (webpack-internal:///./static/Darhild/template-engine.js:45:9)
+    at Array.forEach (<anonymous>)
+    at processContent (webpack-internal:///./static/Darhild/template-engine.js:44:11)
+    at createDiv (webpack-internal:///./static/Darhild/template-engine.js:58:25)
+    at processContent (webpack-internal:///./static/Darhild/template-engine.js:48:10)
+    at createDiv (webpack-internal:///./static/Darhild/template-engine.js:58:25)
+    at processContent (webpack-internal:///./static/Darhild/template-engine.js:48:10)
