@@ -90,11 +90,11 @@ section {
 
 .theme_gap_small {
   --gap: var(--space-xxxl);
-  --gap-half: calc(var(--gap) * 0.5); 
+  --gap-half: calc(var(--gap) * 0.5);
 }
 
 @media screen and (max-width: 1144px) {
-  .theme_gap_small { 
+  .theme_gap_small {
     --gap: var(--space-m)
   };
 }
@@ -646,7 +646,7 @@ section {
   background-color: var(--color-bg-default);
   background-repeat: no-repeat;
   background-position: center center;
-  border: 1px solid var(--color-border);
+  border: 3px solid var(--color-border);
 }
 
 .theme_color_project-default .image {
