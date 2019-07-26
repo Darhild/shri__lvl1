@@ -6,7 +6,7 @@
   background-color: var(--color-bg-default);
 }
 
-section.theme_color_project-inverse {
+.section.theme_color_project-inverse {
   padding-top: var(--space-xxl);
   padding-bottom: var(--space-xxl);
 }
