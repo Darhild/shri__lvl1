@@ -6,7 +6,7 @@
     border: none;
   }
 
-  &__title {
+  .text_view_primary {
     margin-bottom: var(--space-xs);
   }
 }
