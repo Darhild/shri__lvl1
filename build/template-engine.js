@@ -55,7 +55,7 @@ export default function (obj) {
 
         string += `</div>`;
       }     
-      else throw new Error; 
+      else string += " "; 
     }
   }
   
