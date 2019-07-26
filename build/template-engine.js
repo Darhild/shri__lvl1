@@ -10,27 +10,28 @@ export default function (obj) {
     return string;
 
     function createClassName (obj) {
-      if (obj["block"]) string += `${obj["block"]}`;
-      else string += " ";
+      if (obj["block"]) {
+        string += `${obj["block"]}`;
 
-      if (obj["elem"]) string += `__${obj["elem"]} `;
-      else string += " ";
+        if (obj["elem"]) string += `__${obj["elem"]} `;
+        else string += " ";
 
-      if (obj["mods"]) {
-        for (let prop in obj["mods"]) {
-          if(obj["block"]) string += `${obj["block"]}_${prop}_${obj["mods"][prop]} `;
-          else string += " ";
+        if (obj["mods"]) {
+          for (let prop in obj["mods"]) {
+            string += `${obj["block"]}_${prop}_${obj["mods"][prop]} `;
+          }
+        } 
+
+        if (obj["elemMods"]) {
+          for (let prop in obj["elemMods"]) {
+            if(obj["elem"]) string += `${obj["block"]}__${obj["elem"]}_${prop}_${obj["elemMods"][prop]} `;
+            else string += " ";
+          }
         }
-      }
 
-      if (obj["elemMods"]) {
-        for (let prop in obj["elemMods"]) {
-          if(obj["block"] && obj["elem"]) string += `${obj["block"]}__${obj["elem"]}_${prop}_${obj["elemMods"][prop]} `;
-          else string += " ";
-        }
-      }
-
-      if (obj["mix"]) processContent(obj["mix"], createClassName);
+        if (obj["mix"]) processContent(obj["mix"], createClassName);
+      }   
+      else throw new Error("В поле должно быть указано свойство block");         
     }
 
     function processContent(obj, callback) {
