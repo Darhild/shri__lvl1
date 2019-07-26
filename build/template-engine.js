@@ -11,6 +11,7 @@ export default function (obj) {
 
     function createClassName (obj) {
       if (obj["block"]) string += `${obj["block"]}`;
+      else string += " ";
 
       if (obj["elem"]) string += `__${obj["elem"]} `;
       else string += " ";
@@ -29,7 +30,6 @@ export default function (obj) {
 
       if (obj["mix"]) processContent(obj["mix"], createClassName);
     }
-
 
     function processContent(obj, callback) {
       if (Array.isArray(obj)) {
@@ -54,6 +54,6 @@ export default function (obj) {
   }
 
   else {
-    console.log("В элементе должно быть указано поле block")
+    throw new Error("Ваш JSON невалиден");
   }
 }
