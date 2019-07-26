@@ -11,8 +11,11 @@
     border-width: 3px;
   }
 
-  .form__control {
+  .payment__content .form__control {
     width: 65%;
+  }
+
+  .input {
     border: 3px solid var(--color-border);
   }
 

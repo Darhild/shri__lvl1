@@ -8,9 +8,6 @@ body {
   padding: 0;
 }
 
-.section {
-  background-color: var(--color-bg-default);
-}
 
 .theme_breakpoint_default {
   --screen-desktop: 1144px;
@@ -178,6 +175,10 @@ body {
 }
 
 .layout {
+  background-color: var(--color-bg-default);
+}
+
+.section, section {
   background-color: var(--color-bg-default);
 }
 
@@ -757,6 +758,18 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.text_type_h1 {
+  margin: 15px 0 21px;
+}
+.text_type_h2 {
+  margin: 48px 0 20px;
+}
+.text_type_h3 {
+  margin: 43px 0 0;
+}
+.text_type_p {
+  margin: 15px 0 21px;
+}
 .text_size_l .text__word_width_s {
     width: 28px;
   }
@@ -847,18 +860,6 @@ body {
     margin-bottom: calc((var(--line-height-xxl) - 13px) / 2);
   }
 
-.text_type_h1 {
-  margin: 15px 0 21px;
-}
-.text_type_h2 {
-  margin: 48px 0 20px;
-}
-.text_type_h3 {
-  margin: 43px 0 0;
-}
-.text_type_p {
-  margin: 15px 0 21px;
-}
 .text_view_ghost .text__word {
     background-color: var(--color-text-ghost);
   }
@@ -1220,8 +1221,11 @@ body {
     border-width: 3px;
   }
 
-  .payment .form__control {
+  .payment .payment__content .form__control {
     width: 65%;
+  }
+
+  .payment .input {
     border: 3px solid var(--color-border);
   }
 
