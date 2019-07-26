@@ -26,7 +26,6 @@
 
   &__image {
     height: 160px;
-    border: none;
   }
 
   &__title {
@@ -36,6 +35,10 @@
   &__footer {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .image {
+    border: none;
   }
 }
 

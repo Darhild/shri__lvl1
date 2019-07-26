@@ -3,6 +3,7 @@
   border-width: 3px;
 
   &__title {
+    margin-top: var(--space-xxl);
     margin-bottom: var(--space-xxl);
   }
 
