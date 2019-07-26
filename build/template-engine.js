@@ -53,6 +53,10 @@ export default function (obj) {
     }
   }
 
+  else if (obj === null) {
+    throw new Error("Ваш JSON невалиден");
+  }
+
   else {
     throw new Error("Ваш JSON невалиден");
   }

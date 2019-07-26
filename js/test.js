@@ -4546,12 +4546,46 @@ const pages = {
   }
 };
 
-const page = document.body.dataset.attr;
+//const page = document.body.dataset.attr;
 
 const div = document.createElement('div');
 
-for (let prop in pages) {
-  if (prop === page) div.innerHTML = createHTML(pages[prop]);
-}
+/*for (let prop in pages) {
+  if (prop === page) div.innerHTML = template(pages[prop]);
+}*/
+
+const test = {
+  "block": "form",
+  "content": [
+      { "block": "form",
+        "elem": "label",
+        "content": 
+          {
+            "block": "text",
+            "mods": 
+            { 
+              "size": "m" 
+            }
+        }
+      },
+      { 
+        "block": "input", 
+        "mods": 
+        { 
+          "size": "l" 
+        } 
+      },
+      { 
+        "block": "input", 
+        "mods": 
+        { 
+          "size": "s" 
+        } 
+      }
+  ]
+};
+
+div.innerHTML = createHTML(test);
 
 document.body.appendChild(div);
+

@@ -4543,10 +4543,12 @@ function template(obj) {
   if(obj) {
     let string = "";
     createDiv (obj);
+    console.log(string);
     return string;
 
     function createClassName (obj) {
       if (obj["block"]) string += `${obj["block"]}`;
+      else string += " ";
 
       if (obj["elem"]) string += `__${obj["elem"]} `;
       else string += " ";
@@ -4565,7 +4567,6 @@ function template(obj) {
 
       if (obj["mix"]) processContent(obj["mix"], createClassName);
     }
-
 
     function processContent(obj, callback) {
       if (Array.isArray(obj)) {
@@ -4590,16 +4591,22 @@ function template(obj) {
   }
 
   else {
-    console.log("В элементе должно быть указано поле block")
+    throw new Error("Ваш JSON невалиден");
   }
 }
 
-const page = document.body.dataset.attr;
+
+
+//const page = document.body.dataset.attr;
 
 const div = document.createElement('div');
 
-for (let prop in pages) {
+/*for (let prop in pages) {
   if (prop === page) div.innerHTML = template(pages[prop]);
-}
+}*/
+
+const test = {block};
+
+div.innerHTML = template(test);
 
 document.body.appendChild(div);

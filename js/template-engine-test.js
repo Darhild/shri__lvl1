@@ -3,61 +3,65 @@
 * @return {string} HTML разметка страницы
 */
 
-export default function (obj) {
-  let string = "";
-  createDiv (obj);
-  return string;
-
-  function createClassName (obj) {
-    if (obj["block"]) string += `${obj["block"]}`;
-
-    if (obj["elem"]) string += `__${obj["elem"]} `;
-    else string += " ";
-
-    if (obj["mods"]) {
-      for (let prop in obj["mods"]) {
-        string += `${obj["block"]}_${prop}_${obj["mods"][prop]} `
-      }
-    }
-
-    if (obj["elemMods"]) {
-      for (let prop in obj["elemMods"]) {
-        string += `${obj["block"]}__${obj["elem"]}_${prop}_${obj["elemMods"][prop]} `
-      }
-    }
-
-    if (obj["mix"]) {
-      if (Array.isArray(obj["mix"])) {
-      obj["mix"].forEach(block => createClassName(block));
-      }
-      else createClassName(obj["mix"])
-    }
-  }
-
-  function processContent(obj, string) {
-    if (Array.isArray(obj)) {
-      obj.forEach(block => {
-        processContent(obj, string);
-      }
-    }
-    else processContent(obj, string);
-
+export default function createElement(obj) {
+  if(obj) {
+    let string = "";
+    createDiv (obj);
+    console.log(string);
     return string;
+
+    function createClassName (obj) {
+      if (obj["block"]) string += `${obj["block"]}`;
+      else string += " ";
+
+      if (obj["elem"]) string += `__${obj["elem"]} `;
+      else string += " ";
+
+      if (obj["mods"]) {
+        for (let prop in obj["mods"]) {
+          string += `${obj["block"]}_${prop}_${obj["mods"][prop]} `
+        }
+      }
+
+      if (obj["elemMods"]) {
+        for (let prop in obj["elemMods"]) {
+          string += `${obj["block"]}__${obj["elem"]}_${prop}_${obj["elemMods"][prop]} `
+        }
+      }
+
+      if (obj["mix"]) processContent(obj["mix"], createClassName);
+    }
+
+    function processContent(obj, callback) {
+      if (Array.isArray(obj)) {
+        obj.forEach(block => {
+          processContent(block, callback);
+        })
+      }
+      else callback.call(this, ...arguments);
+    }
+
+    function createDiv (obj) {
+      string += `<div class="`;
+
+      createClassName (obj);
+      string = string.trim();
+      string += `">`;
+
+      if (obj["content"]) processContent(obj["content"], createDiv);
+
+      string += `</div>`;
+    }
   }
 
-  function createDiv (obj) {
-    string += `<div class="`;
-
-    createClassName (obj);
-    string = string.trim();
-    string += `">`;
-
-    if (obj["content"]) {
-      let content = "";
-      string += processContent(obj["content"], content);
-    }
-    string += `</div>`;
+  else if (obj === null) {
+    throw new Error("Ваш JSON невалиден");
+  }
+  
+  else {
+    throw new Error("Ваш JSON невалиден");
   }
 }
+
 
 
