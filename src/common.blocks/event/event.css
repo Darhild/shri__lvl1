@@ -3,7 +3,7 @@
 .event {
   min-height: 333px;
 
-  &__participant {
+  &__preview {
     display: flex;
     justify-content: center;
     margin-bottom: var(--space-xl);

@@ -674,9 +674,9 @@ const pages = {
                           { block: 'cover',
                             elem: 'preview',
                             mix: [
-                              { block: 'image'},
-                              { block: 'theme', mods: {'color': 'project-inverse'}}
+                              { block: 'theme', mods: {'color': 'project-brand'}}
                             ],
+                            content: {block: 'image'}
                           },
                           { block: 'cover',
                             elem: 'name',
@@ -1490,8 +1490,8 @@ const pages = {
                                 mix: [
                                   { block: 'theme', mods: {'color': 'project-inverse'}},
                                   { block: 'icon-plus', elem: 'icon', elemMods: {'indent-r': 'm'}},
-                                  { block: 'image'}
-                                ]
+                                ],
+                                content:  { block: 'image'}
                               },
                               { block: 'articles',
                                 elem: 'content',
@@ -1578,8 +1578,8 @@ const pages = {
                                 mix: [
                                   { block: 'theme', mods: {'color': 'project-inverse'}},
                                   { block: 'icon-plus', elem: 'icon', elemMods: {'indent-r': 'm'}},
-                                  { block: 'image'}
-                                ]
+                                ],
+                                content:  { block: 'image'}
                               },
                               { block: 'articles',
                                 elem: 'content',
@@ -1666,8 +1666,8 @@ const pages = {
                                 mix: [
                                   { block: 'theme', mods: {'color': 'project-inverse'}},
                                   { block: 'icon-plus', elem: 'icon', elemMods: {'indent-r': 'm'}},
-                                  { block: 'image'}
-                                ]
+                                ],
+                                content:  { block: 'image'}
                               },
                               { block: 'articles',
                                 elem: 'content',
@@ -3373,7 +3373,7 @@ const pages = {
             ]
           }
         ]
-      }      
+      }
     ]
   },
   pageContent: {

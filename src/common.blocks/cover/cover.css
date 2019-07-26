@@ -4,9 +4,9 @@
   min-height: 408px;
 
   &__preview {
-    min-height: 180px;
+    height: 180px;
     margin-bottom: var(--space-m);
     background-color: transparent;
-    border-width: 3px;
+    border: 3px solid #fff;
   }
 }
