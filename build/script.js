@@ -1,4 +1,6 @@
 'use strict';
+
+ document.addEventListener("DOMContentLoaded", function(){
   document.body.classList.add('theme', 'theme_size_default', 'theme_space_default', 'theme_gap_small', 'theme_color_project-default');
 
   const onoffswitch = document.querySelector(".onoffswitch"),
@@ -22,3 +24,5 @@
     }
 
   });
+
+ });
