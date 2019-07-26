@@ -9,6 +9,10 @@
     margin-bottom: var(--space-s);
   }
 
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+
   .input {
     border: 3px solid var(--color-text-primary);
   }

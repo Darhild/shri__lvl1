@@ -2,6 +2,10 @@
   min-height: 280px;
   border-width: 3px;
 
+  &__title {
+    margin-bottom: var(--space-xxl);
+  }
+
   &__footer {
     display: block;
   }

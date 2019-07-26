@@ -174,7 +174,7 @@ body {
 }
 
 .layout {
-   background-color: var(--color-bg-default);
+  background-color: var(--color-bg-default);
 }
 
 .grid_col-gap_full {
@@ -450,38 +450,6 @@ body {
 .form__item_indent-b_xxxs {
   margin-bottom: var(--space-xxxs);
 }
-.form__item_space-h_l {
-  padding-left: var(--space-l);
-  padding-right: var(--space-l);
-}
-.form__item_space-h_m {
-  padding-left: var(--space-m);
-  padding-right: var(--space-m);
-}
-.form__item_space-h_s {
-  padding-left: var(--space-s);
-  padding-right: var(--space-s);
-}
-.form__item_space-h_xl {
-  padding-left: var(--space-xl);
-  padding-right: var(--space-xl);
-}
-.form__item_space-h_xxl {
-  padding-left: var(--space-xxl);
-  padding-right: var(--space-xxl);
-}
-.form__item_space-h_xxs {
-  padding-left: var(--space-xxs);
-  padding-right: var(--space-xxs);
-}
-.form__item_space-h_xxxl {
-  padding-left: var(--space-xxxl);
-  padding-right: var(--space-xxxl);
-}
-.form__item_space-h_xxxs {
-  padding-left: var(--space-xxxs);
-  padding-right: var(--space-xxxs);
-}
 .form__item_space-v_l {
   padding-top: var(--space-l);
   padding-bottom: var(--space-l);
@@ -513,6 +481,38 @@ body {
 .form__item_space-v_xxxs {
   padding-top: var(--space-xxxs);
   padding-bottom: var(--space-xxxs);
+}
+.form__item_space-h_l {
+  padding-left: var(--space-l);
+  padding-right: var(--space-l);
+}
+.form__item_space-h_m {
+  padding-left: var(--space-m);
+  padding-right: var(--space-m);
+}
+.form__item_space-h_s {
+  padding-left: var(--space-s);
+  padding-right: var(--space-s);
+}
+.form__item_space-h_xl {
+  padding-left: var(--space-xl);
+  padding-right: var(--space-xl);
+}
+.form__item_space-h_xxl {
+  padding-left: var(--space-xxl);
+  padding-right: var(--space-xxl);
+}
+.form__item_space-h_xxs {
+  padding-left: var(--space-xxs);
+  padding-right: var(--space-xxs);
+}
+.form__item_space-h_xxxl {
+  padding-left: var(--space-xxxl);
+  padding-right: var(--space-xxxl);
+}
+.form__item_space-h_xxxs {
+  padding-left: var(--space-xxxs);
+  padding-right: var(--space-xxxs);
 }
 .form__item_vertical-align_center {
   -webkit-box-align: center;
@@ -1221,6 +1221,10 @@ body {
   border-width: 3px;
 }
 
+  .product__title {
+    margin-bottom: var(--space-xxl);
+  }
+
   .product__footer {
     display: block;
   }
@@ -1240,6 +1244,10 @@ body {
 
   .subscription__item {
     margin-bottom: var(--space-s);
+  }
+
+  .subscription__item:last-child {
+    margin-bottom: 0;
   }
 
   .subscription .input {
