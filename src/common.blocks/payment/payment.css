@@ -11,12 +11,12 @@
     border-width: 3px;
   }
 
-  &__item:last-child {
-    margin-bottom: 0 !important;
-  }
-
-  .input {
+  &__control {
     width: 65%;
     border: 3px solid var(--color-border);
+  }
+
+  .form__item:last-child {
+    margin-bottom: 0 !important;
   }
 }
