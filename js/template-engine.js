@@ -4597,16 +4597,12 @@ function template(obj) {
 
 
 
-//const page = document.body.dataset.attr;
+const page = document.body.dataset.attr;
 
 const div = document.createElement('div');
 
-/*for (let prop in pages) {
+for (let prop in pages) {
   if (prop === page) div.innerHTML = template(pages[prop]);
-}*/
-
-const test = {block};
-
-div.innerHTML = template(test);
+}
 
 document.body.appendChild(div);
