@@ -8,7 +8,7 @@ body {
   padding: 0;
 }
 
-.section {
+section {
   background-color: var(--color-bg-default);
 }
 
