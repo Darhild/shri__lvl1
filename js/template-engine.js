@@ -2121,13 +2121,8 @@ const pages = {
                                   }
                                 ]
                               },
-                              { block: 'payment',
-                                elem: 'control',
-                                mix: [
-                                  {block: 'form', elem: 'control'},
-                                ],
-                                content:
-                                  {block: 'input', mods: {'size': 'l'}}
+                              { block: 'input',
+                                mods: {'size': 'l'}
                               }
                             ]
                           },
@@ -2148,13 +2143,8 @@ const pages = {
                                   }
                                 ]
                               },
-                              { block: 'payment',
-                                elem: 'control',
-                                mix: [
-                                  {block: 'form', elem: 'control'},
-                                ],
-                                content:
-                                  {block: 'input', mods: {'size': 'l'}}
+                              { block: 'input',
+                                mods: {'size': 'l'}
                               }
                             ]
                           }
@@ -3259,10 +3249,8 @@ const pages = {
                         content: [
                           { block: 'commercial',
                             elem: 'image',
-                            mix: [
-                              {block: 'image'},
-                              {block: 'theme', mods: {'color': 'project-inverse'}}
-                            ]
+                            mix: [{block: 'theme'}],
+                            content: {block: 'image'}
                           },
 
                         ]
@@ -3747,7 +3735,7 @@ const pages = {
                         ],
                         content: [
                           { block: 'event',
-                            elem: 'participant',
+                            elem: 'preview',
                             content: [
                               { block: 'event',
                                 elem: 'avatar',
@@ -3857,7 +3845,7 @@ const pages = {
                         ],
                         content: [
                           { block: 'event',
-                            elem: 'participant',
+                            elem: 'preview',
                             content: [
                               { block: 'event',
                                 elem: 'avatar',

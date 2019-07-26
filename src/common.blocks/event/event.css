@@ -9,11 +9,11 @@
     margin-bottom: var(--space-xl);
   }
 
-  &__avatar {
-    margin-right: var(--space-xs);
-  }
-
   &__title {
     margin-bottom: var(--space-s);
+  }
+
+  .avatar {
+    margin-right: var(--space-xs);
   }
 }

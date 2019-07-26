@@ -1,9 +1,14 @@
-@import '../../../theme.blocks/theme/_breakpoint_default/theme_breakpoint_default.css';
+@import "../../../theme.blocks/theme/_breakpoint_default/theme_breakpoint_default.css";
 
 @media screen and (max-width: $screen-desktop) {
+
   .grid__fraction {
     grid-column-start: 1;
     grid-column-end: -1;
     margin-bottom: var(--gap);
+  }
+
+  .grid__fraction:last-child {
+    margin-bottom: 0;
   }
 }
