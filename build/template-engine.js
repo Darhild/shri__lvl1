@@ -10,7 +10,7 @@ export default function (obj) {
     return string;
 
     function createClassName (obj) {
-      if (obj["block"]) {
+      if (obj && obj["block"]) {
         string += `${obj["block"]}`;
 
         if (obj["elem"]) string += `__${obj["elem"]} `;
@@ -44,15 +44,18 @@ export default function (obj) {
     }
 
     function createDiv (obj) {
-      string += `<div class="`;
+      if(obj) {
+        string += `<div class="`;
 
-      createClassName (obj);
-      string = string.trim();
-      string += `">`;
+        createClassName (obj);
+        string = string.trim();
+        string += `">`;
 
-      if (obj["content"]) processContent(obj["content"], createDiv);
+        if (obj["content"]) processContent(obj["content"], createDiv);
 
-      string += `</div>`;
+        string += `</div>`;
+      }     
+      else throw new Error; 
     }
   }
   
