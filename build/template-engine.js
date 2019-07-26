@@ -18,13 +18,15 @@ export default function (obj) {
 
       if (obj["mods"]) {
         for (let prop in obj["mods"]) {
-          string += `${obj["block"]}_${prop}_${obj["mods"][prop]} `
+          if(obj["block"]) string += `${obj["block"]}_${prop}_${obj["mods"][prop]} `;
+          else string += " ";
         }
       }
 
       if (obj["elemMods"]) {
         for (let prop in obj["elemMods"]) {
-          string += `${obj["block"]}__${obj["elem"]}_${prop}_${obj["elemMods"][prop]} `
+          if(obj["block"] && obj["elem"]) string += `${obj["block"]}__${obj["elem"]}_${prop}_${obj["elemMods"][prop]} `;
+          else string += " ";
         }
       }
 
@@ -52,11 +54,7 @@ export default function (obj) {
       string += `</div>`;
     }
   }
-
-  else if (obj === null) {
-    throw new Error("Ваш JSON невалиден");
-  }
-
+  
   else {
     throw new Error("Ваш JSON невалиден");
   }
