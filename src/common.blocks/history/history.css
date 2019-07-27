@@ -9,6 +9,7 @@
 
   &__transaction {
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: space-between;
     border-width: 3px;
@@ -19,14 +20,17 @@
   }
 
   &__show {
-    flex: 1;
+    position: relative;
+    height: 60px;
   }
 
-  &__hide {
-    flex: 1;
+  &__destination {
+
   }
 
   &__details {
+    position: absolute;
+    top: 0;
     display: flex;
   }
 

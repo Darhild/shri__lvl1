@@ -177,10 +177,6 @@ section {
 
 @media screen and (max-width: 1144px) {
 
-  .grid_m-columns_12 .grid__fraction_m-col_5 {
-    margin-bottom: var(--gap-half);
-  }
-
   .grid__fraction_m-col_5 {
     margin-bottom: var(--gap);
   }
@@ -440,6 +436,18 @@ section {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.card__footer_space-a_l {
+  padding: var(--space-l);
+}
+.card__footer_space-a_m {
+  padding: var(--space-m);
+}
+.card__footer_space-a_xl {
+  padding: var(--space-xl);
+}
+.card__footer_space-a_xxl {
+  padding: var(--space-xxl);
+}
 .card__footer_distribute_between {
   -webkit-box-align: space-between;
       -ms-flex-align: space-between;
@@ -454,18 +462,6 @@ section {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-}
-.card__footer_space-a_l {
-  padding: var(--space-l);
-}
-.card__footer_space-a_m {
-  padding: var(--space-m);
-}
-.card__footer_space-a_xl {
-  padding: var(--space-xl);
-}
-.card__footer_space-a_xxl {
-  padding: var(--space-xxl);
 }
 .card__footer_vertical-align_bottom {
   -webkit-box-pack: end;
@@ -736,13 +732,11 @@ section {
 .placeholder {
   background-color: var(--color-text-primary);
 }
-.text {
-  display: -webkit-box;
-  display: -ms-flexbox;
+/*.text {
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
+  flex-wrap: wrap;
+}*/
+
 .e-accordion__more {
   display: none;
 }
@@ -943,10 +937,9 @@ section {
 .text_view_secondary .text__word {
     background-color: var(--color-text-secondary);
   }
-/*
-.word {
+.text__word {
   display: inline-block;
-}*/
+}
 
 .articles__article:last-child {
     margin-bottom: 0;
@@ -1186,6 +1179,9 @@ section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1201,18 +1197,17 @@ section {
     }
 
 .history__show {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    position: relative;
+    height: 60px;
   }
 
-.history__hide {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+.history__destination {
+
   }
 
 .history__details {
+    position: absolute;
+    top: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
