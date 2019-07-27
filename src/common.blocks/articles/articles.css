@@ -1,5 +1,9 @@
 .articles {
 
+  &__article:last-child {
+    margin-bottom: 0;
+  }
+
   &__pic {
     width: 170px;
     height: 120px;

@@ -239,6 +239,11 @@ section {
   background-color: var(--color-bg-default);
 }
 
+.section.theme_color_project-inverse {
+  padding-top: var(--space-m);
+  padding-bottom: var(--space-xxxxl);
+}
+
 .grid_col-gap_full {
    grid-column-gap:  var(--gap);
 }
@@ -943,7 +948,11 @@ section {
   display: inline-block;
 }*/
 
-.articles__pic {
+.articles__article:last-child {
+    margin-bottom: 0;
+  }
+
+  .articles__pic {
     width: 170px;
     height: 120px;
   }
