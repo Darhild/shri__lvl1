@@ -234,15 +234,17 @@ section {
   display: grid;
 }
 
+.layout {
+  background-color: green;
+}
+
 .section {
-/*  background-color: var(--color-bg-default);*/
-background: green;
+  background-color: var(--color-bg-default);
 }
 
 .section.theme_color_project-inverse {
   padding-top: var(--space-m);
   padding-bottom: var(--space-xxxxl);
-  background: blue;
 }
 
 .grid_col-gap_full {
@@ -1162,8 +1164,9 @@ background: green;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 100%;
   border-width: 3px;
 }
