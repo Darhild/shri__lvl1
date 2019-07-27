@@ -1,3 +1,5 @@
 .layout__container {
   width: 100%;
+  background-color: var(--color-bg-default);
 }
+

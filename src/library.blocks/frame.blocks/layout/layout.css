@@ -1,16 +1,3 @@
 .layout {
   background-color: var(--color-bg-default);
 }
-
-.layout__container {
-  background-color: var(--color-bg-default);
-}
-
-.section {
-  background-color: var(--color-bg-default);
-}
-
-.section.theme_color_project-inverse {
-  padding-top: var(--space-m);
-  padding-bottom: var(--space-xxxxl);
-}
