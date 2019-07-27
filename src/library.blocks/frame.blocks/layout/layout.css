@@ -1,15 +1,11 @@
 .layout {
-  background-color: var(--color-bg-default);
+  background-color: skyblue;
+  border: 3px solid blue;
 }
 
-.layout:nth-child(odd) {
-  background-color: blue;
+.layout__container {
+  border: 3px solid green;
 }
-
-.layout:nth-child(even) {
-  background-color: green;
-}
-
 
 .section {
   background-color: var(--color-bg-default);

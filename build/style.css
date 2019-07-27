@@ -235,15 +235,12 @@ section {
 }
 
 .layout {
-  background-color: var(--color-bg-default);
+  background-color: skyblue;
+  border: 3px solid blue;
 }
 
-.layout:nth-child(odd) {
-  background-color: blue;
-}
-
-.layout:nth-child(even) {
-  background-color: green;
+.layout__container {
+  border: 3px solid green;
 }
 
 .section {
@@ -1172,9 +1169,9 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 100%;
   border-width: 3px;
 }
