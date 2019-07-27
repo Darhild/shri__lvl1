@@ -2638,7 +2638,7 @@ const pages = {
                                 ]
                               },
                               { block: 'history',
-                                elem: 'sum',
+                                elem: 'quantity',
                                 content: [
                                   { block: 'text',
                                     mods: {'view': 'primary', 'size': 'l'},
@@ -2808,7 +2808,7 @@ const pages = {
                                 ]
                               },
                               { block: 'history',
-                                elem: 'sum',
+                                elem: 'quantity',
                                 content: [
                                   { block: 'text',
                                     mods: {'view': 'primary', 'size': 'l'},
@@ -2978,7 +2978,7 @@ const pages = {
                                 ]
                               },
                               { block: 'history',
-                                elem: 'sum',
+                                elem: 'quantity',
                                 content: [
                                   { block: 'text',
                                     mods: {'view': 'primary', 'size': 'l'},
@@ -3148,7 +3148,7 @@ const pages = {
                                 ]
                               },
                               { block: 'history',
-                                elem: 'sum',
+                                elem: 'quantity',
                                 content: [
                                   { block: 'text',
                                     mods: {'view': 'primary', 'size': 'l'},
