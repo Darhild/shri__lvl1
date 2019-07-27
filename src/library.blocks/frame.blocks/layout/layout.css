@@ -1,10 +1,10 @@
 .section {
-  padding-top: 1px;
-  padding-bottom: 1px;
-  background-color: var(--color-bg-default);
+/*  background-color: var(--color-bg-default);*/
+background: green;
 }
 
 .section.theme_color_project-inverse {
   padding-top: var(--space-m);
   padding-bottom: var(--space-xxxxl);
+  background: blue;
 }
