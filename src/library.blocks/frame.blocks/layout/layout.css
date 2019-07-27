@@ -1,6 +1,16 @@
 .layout {
   background-color: var(--color-bg-default);
 }
+
+.layout:nth-child(odd) {
+  background-color: blue;
+}
+
+.layout:nth-child(even) {
+  background-color: green;
+}
+
+
 .section {
   background-color: var(--color-bg-default);
 }

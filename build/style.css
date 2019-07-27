@@ -237,9 +237,19 @@ section {
 .layout {
   background-color: var(--color-bg-default);
 }
+
+.layout:nth-child(odd) {
+  background-color: blue;
+}
+
+.layout:nth-child(even) {
+  background-color: green;
+}
+
 .section {
   background-color: var(--color-bg-default);
 }
+
 .section.theme_color_project-inverse {
   padding-top: var(--space-m);
   padding-bottom: var(--space-xxxxl);
@@ -1155,6 +1165,16 @@ section {
   }
 }
 .history {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100%;
   border-width: 3px;
 }
