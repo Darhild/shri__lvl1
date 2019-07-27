@@ -27,8 +27,7 @@ const pages = {
           }
         ]
       },
-      { block: 'page',
-        elem: 'section',
+      { block: 'section',
         mix: [
           {block: 'layout'}
         ],
@@ -726,8 +725,7 @@ const pages = {
           }
         ]
       },
-      { block: 'page',
-        elem: 'section',
+      { block: 'section',
         mods: {'color': 'inverse'},
         mix: [
           {block: 'layout'},
@@ -1024,8 +1022,7 @@ const pages = {
           }
         ]
       },
-      { block: 'page',
-        elem: 'section',
+      { block: 'section',
         mods: {'color': 'inverse', 'size': 'indent-b'},
         mix: [
           {block: 'layout'},
@@ -1453,8 +1450,7 @@ const pages = {
           }
         ]
       },
-      { block: 'page',
-        elem: 'section',
+      { block: 'section',
         elemMods: {'space-t': 'xxl'},
         mix: [
           {block: 'layout'}
@@ -3406,8 +3402,7 @@ const pages = {
           }
         ]
       },
-      { block: 'page',
-        elem: 'section',
+      { block: 'section',
         mix: [
           {block: 'layout'}
         ],
@@ -3724,8 +3719,7 @@ const pages = {
           }
         ]
       },
-      { block: 'page',
-        elem: 'section',
+      { block: 'section',
         mix: [
           {block: 'layout'}
         ],
@@ -3963,8 +3957,7 @@ const pages = {
           }
         ]
       },
-      { block: 'page',
-        elem: 'section',
+      { block: 'section',
         mix: [
           {block: 'layout'}
         ],

@@ -146,6 +146,14 @@ section {
   margin-left: auto;
   margin-right: auto;
 }
+.layout__container_indent-b_xxl {
+  margin-bottom: var(--space-xxl);
+}
+
+.layout__container_indent-b_xxxxl {
+  margin-bottom: var(--space-xxxxl);
+}
+
 .layout__container_size_m {
   max-width: 1144px;
 }
@@ -165,14 +173,6 @@ section {
   padding-bottom: var(--space-xxxxxl);
 }
 
-.layout__container_indent-b_xxl {
-  margin-bottom: var(--space-xxl);
-}
-
-.layout__container_indent-b_xxxxl {
-  margin-bottom: var(--space-xxxxl);
-}
-
 .grid {
   display: grid;
 }
@@ -182,7 +182,7 @@ section {
 }
 
 .section.theme_color_project-inverse {
-  padding-top: var(--space-l);
+  padding-top: var(--space-m);
   padding-bottom: var(--space-xxxl);
 }
 
@@ -1104,9 +1104,8 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   height: 100%;
   border-width: 3px;
 }
@@ -1213,6 +1212,25 @@ section {
 .theme_color_project-inverse .onoffswitch {
   text-align: left;
 }
+.product {
+  min-height: 280px;
+  border-width: 3px;
+}
+
+  .product__title {
+    margin-top: var(--space-xxl);
+    margin-bottom: var(--space-xxl);
+  }
+
+  .product__footer {
+    display: block;
+  }
+
+  .product__image {
+    height: 160px;
+    border: var(--color-bg-default);
+  }
+
 .payment {
   grid-column-start: 1;
   background-color: var(--color-bg-default);
@@ -1239,25 +1257,6 @@ section {
     margin-bottom: 0 !important;
   }
 
-.product {
-  min-height: 280px;
-  border-width: 3px;
-}
-
-  .product__title {
-    margin-top: var(--space-xxl);
-    margin-bottom: var(--space-xxl);
-  }
-
-  .product__footer {
-    display: block;
-  }
-
-  .product__image {
-    height: 160px;
-    border: var(--color-bg-default);
-  }
-
 .subscription {
   min-height: 408px;
 }
@@ -1266,7 +1265,7 @@ section {
     margin-bottom: var(--space-xl);
   }
 
-  .subscription__item {
+  .subscription__advantage {
     margin-bottom: var(--space-s);
   }
 
