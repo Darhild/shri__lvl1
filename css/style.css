@@ -232,10 +232,10 @@ section {
 
 .grid {
   display: grid;
-  border: 3px solid red;
 }
 
 .layout {
+  padding: 0;
   background-color: var(--color-bg-default);
 }
 
@@ -302,6 +302,10 @@ section {
 .layout__container {
   width: 100%;
   background-color: var(--color-bg-default);
+}
+
+.layout__container.grid {
+  margin-bottom: 0;
 }
 
 
@@ -395,6 +399,42 @@ section {
   padding-top: var(--space-xxxxl);
   padding-bottom: var(--space-xxxxl);
 }
+.card__content_distribute_center.css {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card__content_space-a_l {
+  padding: var(--space-l);
+}
+.card__content_space-a_m {
+  padding: var(--space-m);
+}
+.card__content_space-a_xl {
+  padding: var(--space-xl);
+}
+.card__content_space-a_xxl {
+  padding: var(--space-xxl);
+}
+.card__content_vertical-align_center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 .card__footer_distribute_between {
   -webkit-box-align: space-between;
       -ms-flex-align: space-between;
@@ -439,42 +479,6 @@ section {
           justify-content: flex-start;
 }
 
-.card__content_distribute_center.css {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.card__content_space-a_l {
-  padding: var(--space-l);
-}
-.card__content_space-a_m {
-  padding: var(--space-m);
-}
-.card__content_space-a_xl {
-  padding: var(--space-xl);
-}
-.card__content_space-a_xxl {
-  padding: var(--space-xxl);
-}
-.card__content_vertical-align_center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
 .form__item_border_bottom {
   border-bottom: 1px solid var(--color-border);
 }
@@ -734,12 +738,12 @@ section {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.e-accordion__short {
-  cursor: pointer;
-}
-
 .e-accordion__more {
   display: none;
+}
+
+.e-accordion__short {
+  cursor: pointer;
 }
 
 .avatar_size_m {
@@ -1150,6 +1154,10 @@ section {
     padding-left: var(--gap);
   }
 }
+.theme_breakpoint_default {
+  --screen-desktop: 1144px;
+}
+
 .history {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1165,7 +1173,7 @@ section {
   border-width: 3px;
 }
 
-  .history__transaction {
+.history__transaction {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1179,29 +1187,29 @@ section {
     border-width: 3px;
   }
 
-  .history__transaction:last-child {
+.history__transaction:last-child {
       border: none;
     }
 
-  .history__show {
+.history__show {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
   }
 
-  .history__hide {
+.history__hide {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
   }
 
-  .history__details {
+.history__details {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 
-  .history__time {
+.history__time {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1214,14 +1222,20 @@ section {
             justify-content: center;
   }
 
-  .history__quantity {
+.history__quantity {
     margin-left: auto;
   }
 
-  .history .list__item:first-child {
+.history .list__item:first-child {
     margin-top: 0;
   }
 
+@media screen and (max-width: 1144px) {
+
+  .history {
+    display: block;
+  }
+}
 .offer {
   min-height: 408px;
 }
@@ -1322,6 +1336,10 @@ section {
 
   .subscription__advantages {
     margin-bottom: var(--space-s);
+  }
+
+  .subscription__control:last-child {
+    margin-bottom: 0;
   }
 
   .subscription .input {

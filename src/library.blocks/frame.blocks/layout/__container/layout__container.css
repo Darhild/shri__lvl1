@@ -3,3 +3,7 @@
   background-color: var(--color-bg-default);
 }
 
+.layout__container.grid {
+  margin-bottom: 0;
+}
+
