@@ -1,8 +1,9 @@
 .section {
+  padding: 0;
   background-color: var(--color-bg-default);
 }
 
 .section.theme_color_project-inverse {
   padding-top: var(--space-m);
-  padding-bottom: var(--space-xxxl);
+  padding-bottom: var(--space-xxxxl);
 }
