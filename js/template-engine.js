@@ -1022,10 +1022,8 @@ const pages = {
           }
         ]
       },
-      { block: 'section',
-        mods: {'color': 'inverse', 'size': 'indent-b'},
+      { block: 'layout',
         mix: [
-          {block: 'layout'},
           {block: 'theme', mods: {'color': 'project-inverse'}}
         ],
         content: [
@@ -1450,11 +1448,7 @@ const pages = {
           }
         ]
       },
-      { block: 'section',
-        elemMods: {'space-t': 'xxl'},
-        mix: [
-          {block: 'layout'}
-        ],
+      { block: 'layout',
         content: [
           { block: 'layout',
             elem: 'container',

@@ -234,8 +234,16 @@ section {
   display: grid;
 }
 
-.layout {
+/*.layout {
+  background-color: var(--color-bg-default);
+}*/
+
+.layout:first-child {
   background-color: green;
+}
+
+.layout:last-child {
+  background-color: blue;
 }
 
 .section {
