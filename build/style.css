@@ -146,14 +146,6 @@ section {
   margin-left: auto;
   margin-right: auto;
 }
-.layout__container_indent-b_xxl {
-  margin-bottom: var(--space-xxl);
-}
-
-.layout__container_indent-b_xxxxl {
-  margin-bottom: var(--space-xxxxl);
-}
-
 .layout__container_size_m {
   max-width: 1144px;
 }
@@ -173,6 +165,14 @@ section {
   padding-bottom: var(--space-xxxxxl);
 }
 
+.layout__container_indent-b_xxl {
+  margin-bottom: var(--space-xxl);
+}
+
+.layout__container_indent-b_xxxxl {
+  margin-bottom: var(--space-xxxxl);
+}
+
 .grid {
   display: grid;
 }
@@ -182,7 +182,7 @@ section {
 }
 
 .section.theme_color_project-inverse {
-  padding-top: var(--space-xl);
+  padding-top: var(--space-l);
   padding-bottom: var(--space-xxxl);
 }
 
@@ -304,7 +304,7 @@ section {
           align-items: center;
 }
 .informer_border_all {
-  border: 3px solid var(--color-bg-default);
+  border: 3px solid var(--color-border);
 }
 
 .informer__action {
@@ -1096,32 +1096,6 @@ section {
     padding-left: var(--gap);
   }
 }
-.offer {
-  min-height: 408px;
-}
-
-  .offer__footer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-
-  .offer__name {
-    margin-bottom: var(--space-xs);
-  }
-
-  .offer__name .text__word {
-      margin-top: 0;
-    }
-
-  .offer__sale {
-    margin-bottom: var(--space-xs);
-  }
-
 .history {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1133,6 +1107,7 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 100%;
   border-width: 3px;
 }
 
@@ -1191,6 +1166,32 @@ section {
 
   .history .list__item:first-child {
     margin-top: 0;
+  }
+
+.offer {
+  min-height: 408px;
+}
+
+  .offer__footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .offer__name {
+    margin-bottom: var(--space-xs);
+  }
+
+  .offer__name .text__word {
+      margin-top: 0;
+    }
+
+  .offer__sale {
+    margin-bottom: var(--space-xs);
   }
 
 .onoffswitch {
@@ -1281,6 +1282,7 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100%;
   min-height: 335px;
 }
 
