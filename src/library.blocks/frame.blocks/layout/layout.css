@@ -1,10 +1,9 @@
 .layout {
-  background-color: skyblue;
-  border: 3px solid blue;
+  background-color: var(--color-bg-default);
 }
 
 .layout__container {
-  border: 3px solid green;
+  background-color: var(--color-bg-default);
 }
 
 .section {
