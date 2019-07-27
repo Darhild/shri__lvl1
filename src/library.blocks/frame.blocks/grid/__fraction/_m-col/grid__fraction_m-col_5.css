@@ -1,3 +1,12 @@
+@import "../../../../theme.blocks/theme/_breakpoint_default/theme_breakpoint_default.css";
+
 .grid__fraction_m-col_5 {
   grid-column-end: span 5;
+}
+
+@media screen and (max-width: $screen-desktop) {
+
+  .grid__fraction_m-col_5 {
+    margin-bottom: var(--gap);
+  }
 }

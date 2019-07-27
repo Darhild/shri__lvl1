@@ -5,7 +5,7 @@
     margin-bottom: var(--space-xl);
   }
 
-  &__advantage:last-child {
+  &__advantages {
     margin-bottom: var(--space-s);
   }
 
