@@ -772,9 +772,9 @@ const pages = {
                           { block: 'product',
                             elem: 'image',
                             mix: [
-                              {block: 'image'},
                               {block: 'theme', mods: {'color': 'project-default'}}
-                            ]
+                            ],
+                            content: {block: 'image'},
                           }
                         ]
                       },
@@ -821,9 +821,9 @@ const pages = {
                           { block: 'product',
                             elem: 'image',
                             mix: [
-                              {block: 'image'},
                               {block: 'theme', mods: {'color': 'project-default'}}
-                            ]
+                            ],
+                            content: {block: 'image'}
                           }
                         ]
                       },
@@ -870,9 +870,9 @@ const pages = {
                           { block: 'product',
                             elem: 'image',
                             mix: [
-                              {block: 'image'},
                               {block: 'theme', mods: {'color': 'project-default'}}
-                            ]
+                            ],
+                            content: {block: 'image'}
                           }
                         ]
                       },
@@ -919,9 +919,9 @@ const pages = {
                           { block: 'product',
                             elem: 'image',
                             mix: [
-                              {block: 'image'},
                               {block: 'theme', mods: {'color': 'project-default'}}
-                            ]
+                            ],
+                            content: {block: 'image'}
                           }
                         ]
                       },

@@ -1,7 +1,7 @@
 .history {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   border-width: 3px;
 
   &__transaction {
@@ -39,9 +39,5 @@
 
   .list__item:first-child {
     margin-top: 0;
-  }
-
-  .list__item:last-child {
-    margin-bottom: 0;
   }
 }

@@ -13,6 +13,6 @@
 
   &__image {
     height: 160px;
-    border: none;
+    border: var(--color-bg-default);
   }
 }

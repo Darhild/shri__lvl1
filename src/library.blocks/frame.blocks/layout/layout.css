@@ -2,11 +2,11 @@
   background-color: var(--color-bg-default);
 }
 
-.section, section {
+.section {
   background-color: var(--color-bg-default);
 }
 
 .section.theme_color_project-inverse {
-  padding-top: var(--space-xxl);
+  padding-top: var(--space-xxxxl);
   padding-bottom: var(--space-xxl);
 }
