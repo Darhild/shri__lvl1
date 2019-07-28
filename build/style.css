@@ -57,19 +57,6 @@ section {
   --color-link: #0070f0; /* Цвет ссылки */
 }
 
-.theme_color_project-inverse {
-/* Цвета блоков */
-  --color-bg-default: #000000; /* Цвет по умолчанию */
-  --color-bg-accent: #FFFFFF; /* Акцентный цвет*/
-  --color-border: #FFFFFF; /* Цвет границ */
-
-  /* Цвета текста */
-  --color-text-primary: #FFFFFF; /* Цвет основного текста */
-  --color-text-secondary: rgba(255, 255, 255, .6); /* Цвет второстепенного текста */
-  --color-text-ghost: rgba(255, 255, 255, .3); /* Цвет дополнительного текста */
-  --color-link: #0070f0; /* Цвет ссылки */
-}
-
 .theme_color_project-warning {
 
 /* Цвета блоков */
@@ -82,6 +69,19 @@ section {
   --color-text-secondary: rgba(255, 255, 255, .6); /* Цвет второстепенного текста */
   --color-text-ghost: rgba(255, 255, 255, .3); /* Цвет дополнительного текста */
   --color-link: #FFF; /* Цвет ссылки */
+}
+
+.theme_color_project-inverse {
+/* Цвета блоков */
+  --color-bg-default: #000000; /* Цвет по умолчанию */
+  --color-bg-accent: #FFFFFF; /* Акцентный цвет*/
+  --color-border: #FFFFFF; /* Цвет границ */
+
+  /* Цвета текста */
+  --color-text-primary: #FFFFFF; /* Цвет основного текста */
+  --color-text-secondary: rgba(255, 255, 255, .6); /* Цвет второстепенного текста */
+  --color-text-ghost: rgba(255, 255, 255, .3); /* Цвет дополнительного текста */
+  --color-link: #0070f0; /* Цвет ссылки */
 }
 
 .theme_breakpoint_default {
@@ -388,6 +388,12 @@ section {
 .list_view_default {
     background-color: var(--color-bg-default);
 }
+.section_indent-b_xxl {
+  margin-bottom: var(--space-xxl);
+}
+.section_indent-b_xxxxl {
+  margin-bottom: var(--space-xxxxl);
+}
 .section_space-x_xxl {
   padding-top: var(--space-xxl);
   padding-bottom: var(--space-xxl);
@@ -395,12 +401,6 @@ section {
 .section_space-x_xxxxl {
   padding-top: var(--space-xxxxl);
   padding-bottom: var(--space-xxxxl);
-}
-.section_indent-b_xxl {
-  margin-bottom: var(--space-xxl);
-}
-.section_indent-b_xxxxl {
-  margin-bottom: var(--space-xxxxl);
 }
 .card__content_distribute_center.css {
   display: -webkit-box;
@@ -1275,12 +1275,13 @@ section {
     margin-bottom: var(--space-xs);
   }
 
-@media screen and (max-width: 1144px) {
+/*
+@media screen and (max-width: $screen-desktop) {
 
   .offer {
     margin-bottom: var(--gap);
   }
-}
+}*/
 .onoffswitch {
   width: 97px;
   height: 32px;
