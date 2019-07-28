@@ -30,7 +30,7 @@
 
   &__details {
     position: absolute;
-    top: 0;
+    top: 3px;
     display: flex;
   }
 

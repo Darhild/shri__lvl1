@@ -6,7 +6,11 @@
 
 @media screen and (max-width: $screen-desktop) {
 
-  .grid__fraction_m-col_3 {
+  .grid_m-columns_10 .grid__fraction_m-col_3 {
     margin-bottom: var(--gap-half);
+  }
+
+  .grid_m-columns_12 .grid__fraction_m-col_3 {
+    margin-bottom: var(--gap);
   }
 }
