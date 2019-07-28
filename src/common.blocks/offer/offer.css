@@ -1,3 +1,5 @@
+@import "../../library.blocks/theme.blocks/theme/_breakpoint_default/theme_breakpoint_default.css";
+
 .offer {
   min-height: 408px;
 
@@ -16,5 +18,12 @@
 
   &__sale {
     margin-bottom: var(--space-xs);
+  }
+}
+
+@media screen and (max-width: $screen-desktop) {
+
+  .offer {
+    margin-bottom: var(--gap);
   }
 }

@@ -135,13 +135,10 @@ section {
 
 @media screen and (max-width: 1144px) {
 
-  .grid_m-columns_10 .grid__fraction_m-col_2 {
+  .grid__fraction_m-col_2 {
     margin-bottom: var(--gap-half);
   }
 
-  .grid_m-columns_12 .grid__fraction_m-col_2 {
-    margin-bottom: var(--gap);
-  }
 }
 .theme_breakpoint_default {
   --screen-desktop: 1144px;
@@ -153,13 +150,10 @@ section {
 
 @media screen and (max-width: 1144px) {
 
-  .grid_m-columns_10 .grid__fraction_m-col_3 {
+  .grid__fraction_m-col_3 {
     margin-bottom: var(--gap-half);
   }
 
-  .grid_m-columns_12 .grid__fraction_m-col_3 {
-    margin-bottom: var(--gap);
-  }
 }
 .theme_breakpoint_default {
   --screen-desktop: 1144px;
@@ -394,12 +388,6 @@ section {
 .list_view_default {
     background-color: var(--color-bg-default);
 }
-.section_indent-b_xxl {
-  margin-bottom: var(--space-xxl);
-}
-.section_indent-b_xxxxl {
-  margin-bottom: var(--space-xxxxl);
-}
 .section_space-x_xxl {
   padding-top: var(--space-xxl);
   padding-bottom: var(--space-xxl);
@@ -407,6 +395,12 @@ section {
 .section_space-x_xxxxl {
   padding-top: var(--space-xxxxl);
   padding-bottom: var(--space-xxxxl);
+}
+.section_indent-b_xxl {
+  margin-bottom: var(--space-xxl);
+}
+.section_indent-b_xxxxl {
+  margin-bottom: var(--space-xxxxl);
 }
 .card__content_distribute_center.css {
   display: -webkit-box;
@@ -1248,14 +1242,18 @@ section {
 @media screen and (max-width: 1144px) {
 
   .history {
-    display: block;
+
   }
 }
+.theme_breakpoint_default {
+  --screen-desktop: 1144px;
+}
+
 .offer {
   min-height: 408px;
 }
 
-  .offer__footer {
+.offer__footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1265,18 +1263,24 @@ section {
             align-items: flex-start;
   }
 
-  .offer__name {
+.offer__name {
     margin-bottom: var(--space-xs);
   }
 
-  .offer__name .text__word {
+.offer__name .text__word {
       margin-top: 0;
     }
 
-  .offer__sale {
+.offer__sale {
     margin-bottom: var(--space-xs);
   }
 
+@media screen and (max-width: 1144px) {
+
+  .offer {
+    margin-bottom: var(--gap);
+  }
+}
 .onoffswitch {
   width: 97px;
   height: 32px;
